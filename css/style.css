@@ -1,5 +1,6 @@
 body {
-  width: 100%;
+  width: 1920px;
+  max-width: 1920px;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -32,9 +33,99 @@ body {
   width: 100%;
 }
 
+.slogan {
+  font-size: 3.22rem;
+  line-height: 3.58rem;
+}
+
+.offer {
+  font-size: 1.58rem;
+  line-height: normal;
+}
+
+/*.screen2 {*/
+  /*margin:0 auto;*/
+/*}*/
+
+.screen2__caption {
+  /*margin:0 auto;*/
+  font-size: 3.22rem;
+  line-height: normal;
+}
+
+.screen2__offer {
+  /*margin:0 auto;*/
+  font-size: 1.29rem;
+  line-height: normal;
+}
+
+.draganddrop {
+  font-size: 1.58rem;
+  line-height: normal;
+}
+
+.screen3__caption {
+  font-size: 4.29rem;
+  line-height: normal;
+}
+
+.screen3__offer {
+  font-size: 1.29rem;
+  line-height: normal;
+}
+
+.screen4__caption {
+  font-size: 3.22rem;
+  line-height: normal;
+}
+
+.range__caption {
+  font-size: 1.43rem;
+  line-height: normal;
+}
+
+.range__description {
+  font-size: 1.15rem;
+  line-height: normal;
+}
+
+.screen5__caption {
+  font-size: 3.22rem;
+  line-height: normal;
+}
+
+.screen5__search__input {
+  font-size: 1.15rem;
+  line-height: normal;
+}
+
 .map__class {
   height: 750px;
   margin: 0 auto;
   padding: 0;
   background: url("../img/map.jpg") no-repeat;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__copyright {
+  font-size: 1.15rem;
+  line-height: normal;
+}
+
+.footer-contact {
+  display: flex;
+}
+
+.footer__number {
+  font-size: 1.58rem;
+  line-height: normal;
+}
+
+.footer__developer {
+  font-size: 1.15rem;
+  line-height: normal;
 }
