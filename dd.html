@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.1/rangeslider.css" rel="stylesheet">
 </head>
 <body>
 <main id="fullpage">
@@ -43,62 +44,100 @@
                             <p class="screen2__offer">Бывает, весь день расписан по минутам и некогда даже подумать о еде.<br>
                                 Чтобы не остаться без обеда - перекусите фирменным денером от Дядя Денер.
                             </p>
-                            <div class="screen2__animation take_1 active">
-                                <div class="screen2__dener">
-                                    <img class="screen2__dener__animation" src="img/screen2_animation_dener1.jpg" alt="Тарелка с денером">
+
+
+
+
+
+                            <div class="screen2__animation">
+                                <div class="screen2__animation_left">
+                                    <img class="screen2__animation__motor screen2__dener__animation take_0 active" src="img/screen2_animation_dener0.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__motor screen2__dener__animation take_1" src="img/screen2_animation_dener1.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__motor screen2__dener__animation take_2" src="img/screen2_animation_dener2.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__motor screen2__dener__animation take_3" src="img/screen2_animation_dener3.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__motor screen2__dener__animation take_4" src="img/screen2_animation_dener4.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__motor screen2__dener__animation take_5" src="img/screen2_animation_dener5.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__motor screen2__dener__animation take_6" src="img/screen2_animation_dener6.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__motor screen2__dener__animation take_7" src="img/screen2_animation_dener7.jpg" alt="Тарелка с денером">
                                 </div>
-                                <div class="description"><p class="description__element">Ароматный лаваш правильной круглой формы - вот с чего начинается хороший денер.</p></div>
-                                <div class="time"></div>
-                            </div>
-                            <div class="screen2__animation take_2 hidden">
-                                <div class="screen2__dener">
-                                    <img class="screen2__dener__animation" src="img/screen2_animation_dener2.jpg" alt="Тарелка с денером">
+                                <div class="screen2__animation_right">
+                                    <div class="description">
+                                        <div class="screen2__animation__motor description__block take_0 description__background_1 active"><p class="description__element">Ароматный лаваш правильной круглой формы - вот с чего начинается хороший денер.</p></div>
+                                        <div class="screen2__animation__motor description__block take_1 description__background_2"><p class="description__element">Наши авторские соусы - идеальное сочетание трав и специй. Они придают денеру особенный вкус.</p></div>
+                                        <div class="screen2__animation__motor description__block take_2 description__background_3"><p class="description__element">Свежие овощи делают денер сочным. В прямом смысле "пальчики оближешь”.</p></div>
+                                        <div class="screen2__animation__motor description__block take_3 description__background_4"><p class="description__element">Когда запеченую курочку снимают с гриля и смешивают с хрустящим луком, аромат стоит - не передать. Только пробовать.</p></div>
+                                        <div class="screen2__animation__motor description__block take_4 description__background_5"><p class="description__element">Томатный соус с зеленью отлично подходит к мясу.</p></div>
+                                        <div class="screen2__animation__motor description__block take_5 description__background_6"><p class="description__element">Осталось аккуратно завернуть денер, уложить на гриль….</p></div>
+                                        <div class="screen2__animation__motor description__block take_6 description__background_7">...и равномерно запечь.</div>
+                                        <div class="screen2__animation__motor description__block take_7 description__background_8">Три минуты и ваш денер готов.</div>
+                                    </div>
+                                    <div class="input"><input id="rangeSlider" type="range" min="0" max="7" step="1" value="0">
+                                        <div class="inputRange">
+                                            <div class="inputRange__item circle__before"></div>
+                                            <div class="inputRange__item circle__before"></div>
+                                            <div class="inputRange__item circle__before"></div>
+                                            <div class="inputRange__item circle__before"></div>
+                                            <div class="inputRange__item circle__before"></div>
+                                            <div class="inputRange__item circle__before"></div>
+                                            <div class="inputRange__item circle__before"></div>
+                                            <div class="inputRange__item circle__before"></div>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <div class="description"><p class="description__element">Наши авторские соусы - идеальное сочетание трав и специй. Они придают денеру особенный вкус.</p></div>
-                                <div class="time"></div>
                             </div>
-                            <div class="screen2__animation take_3 hidden">
-                                <div class="screen2__dener">
-                                    <img class="screen2__dener__animation" src="img/screen2_animation_dener3.jpg" alt="Тарелка с денером">
-                                </div>
-                                <div class="description"><p class="description__element">Свежие овощи делают денер сочным. В прямом смысле "пальчики оближешь”.</p></div>
-                                <div class="time"></div>
-                            </div>
-                            <div class="screen2__animation take_4 hidden">
-                                <div class="screen2__dener">
-                                    <img class="screen2__dener__animation" src="img/screen2_animation_dener4.jpg" alt="Тарелка с денером">
-                                </div>
-                                <div class="description"><p class="description__element">Когда запеченую курочку снимают с гриля и смешивают с хрустящим луком, аромат стоит - не передать. Только пробовать.</p></div>
-                                <div class="time"></div>
-                            </div>
-                            <div class="screen2__animation take_5 hidden">
-                                <div class="screen2__dener">
-                                    <img class="screen2__dener__animation" src="img/screen2_animation_dener5.jpg" alt="Тарелка с денером">
-                                </div>
-                                <div class="description"><p class="description__element">Томатный соус с зеленью отлично подходит к мясу. </p></div>
-                                <div class="time"></div>
-                            </div>
-                            <div class="screen2__animation take_6 hidden">
-                                <div class="screen2__dener">
-                                    <img class="screen2__dener__animation" src="img/screen2_animation_dener6.jpg" alt="Тарелка с денером">
-                                </div>
-                                <div class="description"><p class="description__element">Осталось аккуратно завернуть денер, уложить на гриль….</p></div>
-                                <div class="time"></div>
-                            </div>
-                            <div class="screen2__animation take_7 hidden">
-                                <div class="screen2__dener">
-                                    <img class="screen2__dener__animation" src="img/screen2_animation_dener7.jpg" alt="Тарелка с денером">
-                                </div>
-                                <div class="description"><p class="description__element">...и равномерно запечь.</p></div>
-                                <div class="time"></div>
-                            </div>
-                            <div class="screen2__animation take_8 hidden">
-                                <div class="screen2__dener">
-                                    <img class="screen2__dener__animation" src="img/screen2_animation_dener8.jpg" alt="Тарелка с денером">
-                                </div>
-                                <div class="description"><p class="description__element">Три минуты и ваш денер готов.</p></div>
-                                <div class="time"></div>
-                            </div>
+                            <!--<div class="screen2__animation take_1">-->
+                                <!--<div class="screen2__dener">-->
+                                    <!--<img class="screen2__dener__animation" src="img/screen2_animation_dener2.jpg" alt="Тарелка с денером">-->
+                                <!--</div>-->
+                                <!--<div class="screen2__dener">-->
+                                    <!--<img class="screen2__dener__animation" src="img/screen2_animation_dener3.jpg" alt="Тарелка с денером">-->
+                                <!--</div>-->
+                                <!--<div class="description"></div>-->
+                                <!--<div class="time"></div>-->
+                            <!--</div>-->
+                            <!--<div class="screen2__animation take_2">-->
+                                <!--<div class="screen2__dener">-->
+                                    <!--<img class="screen2__dener__animation" src="img/screen2_animation_dener3.jpg" alt="Тарелка с денером">-->
+                                <!--</div>-->
+                                <!--<div class="description"></div>-->
+                                <!--<div class="time"></div>-->
+                            <!--</div>-->
+                            <!--<div class="screen2__animation take_3">-->
+                                <!--<div class="screen2__dener">-->
+                                    <!--<img class="screen2__dener__animation" src="img/screen2_animation_dener4.jpg" alt="Тарелка с денером">-->
+                                <!--</div>-->
+                                <!--<div class="description"></div>-->
+                                <!--<div class="time"></div>-->
+                            <!--</div>-->
+                            <!--<div class="screen2__animation take_4">-->
+                                <!--<div class="screen2__dener">-->
+                                    <!--<img class="screen2__dener__animation" src="img/screen2_animation_dener5.jpg" alt="Тарелка с денером">-->
+                                <!--</div>-->
+                                <!--<div class="description"></div>-->
+                                <!--<div class="time"></div>-->
+                            <!--</div>-->
+                            <!--<div class="screen2__animation take_5">-->
+                                <!--<div class="screen2__dener">-->
+                                    <!--<img class="screen2__dener__animation" src="img/screen2_animation_dener6.jpg" alt="Тарелка с денером">-->
+                                <!--</div>-->
+                                <!--<div class="description"></div>-->
+                                <!--<div class="time"></div>-->
+                            <!--</div>-->
+                            <!--<div class="screen2__animation take_6">-->
+                                <!--<div class="screen2__dener">-->
+                                    <!--<img class="screen2__dener__animation" src="img/screen2_animation_dener7.jpg" alt="Тарелка с денером">-->
+                                <!--</div>-->
+                                <!--<div class="description"><p class="description__element"></p></div>-->
+                                <!--<div class="time"></div>-->
+                            <!--</div>-->
+                            <!--<div class="screen2__animation take_7">-->
+                                <!--<div class="screen2__dener">-->
+                                    <!--<img class="screen2__dener__animation" src="img/screen2_animation_dener8.jpg" alt="Тарелка с денером">-->
+                                <!--</div>-->
+                                <!--<div class="description"><p class="description__element"></p></div>-->
+                                <!--<div class="time"></div>-->
+                            <!--</div>-->
                             <div class="screen2__producer">
                                 <div class="circle__dashed_out">
                                     <div class="circle__dashed_in"></div>
@@ -254,26 +293,17 @@
     </div>
 </footer>
 
-<script>
-    $(document).ready(function() {
-        $('#fullpage').fullpage({
-            onSlideChange: function (value) {
-                $('.slide').removeClass('active');
-                $('.slide' + value).addClass('active');
-            }
-        });
-    });
-</script>
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.js"></script>-->
 
 <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.1/rangeslider.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+
 <!--<script type="text/javascript">-->
     <!--var map;-->
 
