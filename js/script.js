@@ -96,9 +96,9 @@ $( document ).ready(function() {
         speed: 400,
         spaceBetween: 100,
         pagination: '.swiper-pagination',
-        paginationType: 'progress',
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
+        paginationType: 'progress',
     });
 
     $('.range__elem1').click(function (e) {
