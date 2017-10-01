@@ -49,9 +49,9 @@ body {
   line-height: normal;
 }
 
-/*.screen2 {*/
-  /*margin:0 auto;*/
-/*}*/
+.screen2 {
+  padding-bottom: 50px;
+}
 
 .screen2__caption {
   font-size: 3.22rem;
@@ -98,8 +98,15 @@ body {
 }
 
 .footer {
+  background: black;
+  color: #ffffff;
+}
+
+.footer__skin {
   display: flex;
   justify-content: space-around;
+  height: 130px;
+  align-items: center;
 }
 
 .footer__copyright {
@@ -107,7 +114,7 @@ body {
   line-height: normal;
 }
 
-.footer-contact {
+.footer__contact {
   display: flex;
 }
 
@@ -381,7 +388,7 @@ a:hover {
   width: 100%;
   height: 13px;
   left: 0;
-  top: 0;
+  top: 100%;
   z-index: 10;
 }
 
@@ -490,7 +497,7 @@ a:hover {
 }
 
 .screen4 {
-  height: 130vh;
+  height: 120vh;
 }
 
 .screen4__container {
@@ -550,10 +557,6 @@ a:hover {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-}
-
-.section_five {
-  background: #dfdfdf;
 }
 
 .range__elem2 {

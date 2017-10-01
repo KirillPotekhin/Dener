@@ -17,16 +17,16 @@ DG.then(function() {
         zoom: 16
     });
 
-    // map.locate({setView: true, watch: true})
-    //     .on('locationfound', function(e) {
-    //         DG.marker([e.latitude, e.longitude]).addTo(map);
-    //     })
-    //     .on('locationerror', function(e) {
-    //         DG.popup()
-    //             .setLatLng(map.getCenter())
-    //             .setContent('Доступ к определению местоположения отключён')
-    //             .openOn(map);
-    //     });
+    map.locate({setView: true, watch: true})
+        .on('locationfound', function(e) {
+            DG.marker([e.latitude, e.longitude]).addTo(map);
+        })
+        .on('locationerror', function(e) {
+            DG.popup()
+                .setLatLng(map.getCenter())
+                .setContent('Доступ к определению местоположения отключён')
+                .openOn(map);
+        });
 
     DG.marker([55.041601, 82.917294]).addTo(map).bindPopup('Дядя Дёнер<br>сеть кафе быстрого питания<br>Адрес:<br>Телефон предзаказа: 399-1-400<br>Режим работы: круглосуточно');
     DG.marker([54.987239, 82.902463]).addTo(map).bindPopup('Общага');
@@ -64,17 +64,16 @@ $( document ).ready(function() {
             $('.screen2__animation__img.take_' + value).addClass('active');
 
             if (value%2===0) {
-                console.log(1)
                 $('.screen2__animation__motor').removeClass('active');
                 $('.screen2__animation__motor.take_' + value).addClass('active');
+                // $('.inputRange__item').removeClass('circle__after');
+                // $('.inputRange__item').each(function(index, elem) {
+                //     if (index%2===0 < value%2===0) {
+                //         $(elem).addClass('circle__after');
+                //     }
+                // })
             }
 
-            // $('.inputRange__item').removeClass('circle__after');
-            // $('.inputRange__item').each(function(index, elem) {
-            //     if (index < value) {
-            //         $(elem).addClass('circle__after');
-            //     }
-            // })
         },
 
         from: 0,
