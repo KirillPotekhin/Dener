@@ -33,12 +33,18 @@ body {
   /*width: 100%;*/
 }
 
-.slogan {
-  font-size: 3.22rem;
-  line-height: 3.58rem;
+.screen1__slogan {
+  z-index: 5;
 }
 
-.offer {
+.screen1__slogan h1{
+  font-size: 3.22rem;
+  line-height: 3.58rem;
+  z-index: 5;
+  margin-bottom: 35px;
+}
+
+.screen1__offer {
   font-size: 1.58rem;
   line-height: normal;
 }
@@ -48,15 +54,15 @@ body {
 /*}*/
 
 .screen2__caption {
-  /*margin:0 auto;*/
   font-size: 3.22rem;
   line-height: normal;
+  text-transform: uppercase;
 }
 
 .screen2__offer {
-  /*margin:0 auto;*/
   font-size: 1.29rem;
   line-height: normal;
+  text-align: center;
 }
 
 .draganddrop {
@@ -134,8 +140,6 @@ body {
   /*height: 100vh;*/
 }
 
-
-
 .line {
   margin: 125px auto 76px auto;
   text-align: center;
@@ -149,7 +153,7 @@ body {
   height: 6px;
   display: block;
   background: #ffde00;
-  bottom: -1.5rem;
+  bottom: -1.78rem;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 3px;
@@ -172,10 +176,6 @@ body {
 }
 .screen1__logo {
   padding-top: 5vh;
-  z-index: 3;
-}
-
-.screen1__slogan   {
   z-index: 3;
 }
 
@@ -232,18 +232,72 @@ a:hover {
   /*margin: auto 0;*/
 }
 
+.description {
+  height: 300px;
+}
+
+.description__block {
+  text-align: center;
+}
+
+.screen2__animation__img {
+  display: flex;
+  width: 575px;
+  opacity: 0;
+  height: 0;
+  transition: opacity 0.3s ease;
+}
+
+.screen2__animation__img.active {
+  opacity: 1;
+  height: auto;
+  transition: opacity 0.3s ease 0.3s;
+}
+
 .screen2__animation__motor {
+  position: relative;
   width: 100%;
   display: flex;
   opacity: 0;
   height: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 
 .screen2__animation__motor.active {
   opacity: 1;
   height: auto;
-  transition: opacity 0.5s ease 0.5s;
+  transition: opacity 0.3s ease 0.3s;
+}
+
+.description__background {
+  position: absolute;
+  top: 30%;
+  left: -11%;
+  font-size: 11rem;
+  transform: translateX(15%);
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.description__background1 {
+  position: absolute;
+  top: 30%;
+  left: -10%;
+  font-size: 11rem;
+  transform: translateX(23%);
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.description__element {
+  z-index: 2;
+  width: 390px;
+  height: 300px;
+  font-size: 1.57rem;
+  position: absolute;
+  top: 40%;
+  left: 24%;
+  transform: translateY(40%);
 }
 
 .rangeslider {
@@ -263,40 +317,39 @@ a:hover {
   /*top: -2px !important;*/
 }
 
-.rangeslider--horizontal {
-  height: 1px !important;
+.input .rangeslider--horizontal {
+  height: 1px;
   border-top: 1px dashed black;
+  /*width: calc(100% - 70px);*/
+  /*margin-left: 35px;*/
 }
 
 .input {
   position: relative;
+  width: 485px;
+  padding-top: 30px;
+  padding-left: 70px;
 }
 
 .inputRange {
   position: absolute;
   z-index: 3;
-  top: 0;
-  left: 0;
+  bottom: -10px;
   transform: translateY(-50%);
-  width: 100%;
+  /*width: calc(100% - 70px);*/
+  /*margin-left: 35px;*/
+  width: 485px;
   display: flex;
   justify-content: space-between;
 
 }
 
-
-
+.pointer {
+  z-index: 10;
+}
 
 .screen2__container {
-  text-align: center;
 }
-
-.screen2__producer {
-  display: flex;
-  align-items: center;
-}
-
-
 
 .circle__before {
   width: 10px;
@@ -352,8 +405,27 @@ a:hover {
   width: 20px;
 }
 
+.swiper-container {
+  height: 100vh;
+  width: 100vw;
+  background: #f1f1f1;
+}
 
+.swiper-pagination-progress .swiper-pagination-progressbar {
+  background: #f8f810;
+}
 
+.range__block6 {
+  height: 70vh;
+  background: #f1f1f1;
+}
+
+.range__elem3 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .screen4__dener__animation {
   height: 20vh;
@@ -361,4 +433,25 @@ a:hover {
 
 .section_five {
   background: #dfdfdf;
+}
+
+.range__elem2 {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.range.active .range__elem2 {
+  opacity: 1;
+  transition: opacity 0.6s ease 0.6s;
+}
+
+.range__elem3 {
+  height: 0;
+  opacity: 0;
+}
+
+.range__elem3.active {
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.9s ease;
 }
