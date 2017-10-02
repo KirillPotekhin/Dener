@@ -261,13 +261,19 @@ a:hover {
   width: 575px;
   opacity: 0;
   height: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease 0.3s;
+  transform: rotate(270deg);
+}
+
+.rotate {
+  transform: rotate(0deg);
 }
 
 .screen2__animation__img.active {
   opacity: 1;
   height: auto;
   transition: opacity 0.3s ease 0.3s;
+
 }
 
 .screen2__animation__motor {
