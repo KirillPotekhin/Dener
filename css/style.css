@@ -187,6 +187,7 @@ body {
   background: url("../img/heder_background.jpg") no-repeat;
   background-size: cover;
   overflow: hidden;
+  width: 100vw;
 }
 
 .screen1 {
