@@ -1,12 +1,3 @@
-// var map;
-//
-// DG.then(function () {
-//     map = DG.map('map', {
-//         center: [55.0425, 82.9343],
-//         zoom: 15
-//     });
-// });
-
 var mapInited = false;
 
 $(window).on('scroll', function() {
@@ -14,8 +5,6 @@ $(window).on('scroll', function() {
         mapInited = true;
         DG.then(function() {
             var map;
-
-
 
             map = DG.map('map', {
                 center: [55.0425, 82.9343],
