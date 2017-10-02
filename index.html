@@ -1,112 +1,249 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <title>Дядя Дёнер</title>
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.css" rel="stylesheet">
+    <link href="css/jquery.range.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.1/rangeslider.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<header class="screen1 header">
-  <div class="state state__constant">
-    <a class="logo">
-      <img class="logo_img" src="img/logo.png" alt="Дядя Дёнер" width="82" height="82">
-    </a>
-    <h1 class="slogan">Дядя Денер - быстрый перекус <br> на все случаи работы</h1>
-    <p class="offer">Посмотрите как он готовится <br> или <a class="offer_link" href="#"> закажите сразу.</a></p>
-    <div class="cursor">
-      <img class="cursor__img" src="img/mouse.png" alt="Интересно?! Смотри ниже" width="49" height="41"></div>
-  </div>
-  <div class="state__animation">
-    <img class="state__animation__dener" src="img/header_dener.png" alt="Тарелка с денером">
-  </div>
-</header>
-<main class="main">
-  <div class="page">
-    <div class="container">
-      <section class="section">
-        <h2 class="section__header">Готовим за 3 минуты</h2>
-        <div class="section__content"></div>
-      </section>
+<main id="fullpage">
+    <div class="section section_first">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="screen1">
+                        <div class="screen1__logo"><img class="logo_img" src="img/logo.png" alt="Дядя Дёнер" width="82" height="82"></div>
+                        <div class="screen1__slogan">
+                            <h1>Дядя Денер - быстрый перекус <br> на все случаи работы</h1>
+                            <p class="screen1__offer">Посмотрите как он готовится <br> или <a class="offer_link" href="#"> закажите сразу.</a></p>
+                        </div>
+                        <div class="screen1__scroll"><img class="cursor__img" src="img/mouse.png" alt="Интересно?! Смотри ниже" width="49" height="41"></div>
+                        <div class="screen1__dish"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <section class="screen2">
-    <h2 class="screen2__caption">
-      Готовим за 3 минуты
-    </h2>
-    <p class="screen2__offer">Бывает, весь день расписан по минутам и некогда даже подумать о еде.<br>
-      Чтобы не остаться без обеда - перекусите фирменным денером от Дядя Денер.</p>
-    <section class="screen2__animation">
-      <div class="screen2__dener">
-        <img class="screen2__dener__animation" src="img/screen2_animation_dener.jpg" alt="Тарелка с денером">
-      </div>
-      <div class="draganddrop">Drag & drop</div>
-    </section>
-  </section>
-  <section class="screen3">
-    <h2 class="screen3__caption">Быстро</h2>
-    <p class="screen3__offer">Недавно мы посчитали, что сделали почти 14 миллионов денеров. Так что, не сомневайтесь - наши повара умеют делать их быстро.</p>
-    <h2 class="screen3__caption">Вкусно</h2>
-    <p class="screen3__offer">Мы не жарим, а запекаем мясо, используем только свежие овощи, готовим авторские соусы. Все честно, все на ваших глазах.</p>
-    <h2 class="screen3__caption">Удобно</h2>
-    <p class="screen3__offer">В офисе, в машине, в метро или на ходу - полноценный обед, где бы вы не находились.</p>
-    <figure class="screen3__photo-gallery">
-      Фото галерея
-    </figure>
-  </section>
-  <section class="screen4">
-    <h2 class="screen4__caption">
-      Наш ассортимент
-    </h2>
-    <div class="range range__elem1">
-      <h3 class="range__caption">Острый</h3><p class="range__description">Описание Острого денера</p>
-      <img class="screen4__dener__animation" src="img/roll1.jpg" alt="Острый">
+    <div class="section section_second">
+        <div class="container">
+            <div class="row">
+                <div class="screen2__header line">
+                    <h2 class="screen2__caption">
+                        Готовим за 3 минуты
+                    </h2>
+                </div>
+                <p class="screen2__offer">Бывает, весь день расписан по минутам и некогда даже подумать о еде.<br>
+                    Чтобы не остаться без обеда - перекусите фирменным денером от Дядя Денер.
+                </p>
+                <div class="col">
+                    <div class="screen2">
+                        <div class="screen2__container">
+                            <div class="screen2__animation">
+                                <div class="screen2__animation_left">
+                                    <img class="screen2__animation__img screen2__dener__animation take_0 active" src="img/roll0.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__img screen2__dener__animation take_1" src="img/roll1.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__img screen2__dener__animation take_2" src="img/roll2.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__img screen2__dener__animation take_3" src="img/roll3.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__img screen2__dener__animation take_4" src="img/roll4.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__img screen2__dener__animation take_5" src="img/roll5.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__img screen2__dener__animation take_6" src="img/roll6.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__img screen2__dener__animation take_7" src="img/roll7.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__img screen2__dener__animation take_8" src="img/roll8.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__img screen2__dener__animation take_9" src="img/roll9.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__img screen2__dener__animation take_10" src="img/roll10.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__img screen2__dener__animation take_11" src="img/roll11.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__img screen2__dener__animation take_12" src="img/roll12.jpg" alt="Тарелка с денером">
+
+                                    <img class="screen2__animation__img screen2__dener__animation take_13" src="img/roll14.jpg" alt="Тарелка с денером">
+                                    <img class="screen2__animation__img screen2__dener__animation take_14" src="img/roll15.jpg" alt="Тарелка с денером">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="screen2">
+                        <div class="screen2__container">
+                            <div class="screen2__animation">
+                                <div class="screen2__animation_right">
+                                    <div class="description">
+                                        <div class="screen2__animation__motor description__block take_0 active"><div class="description__background"><span>10 сек.</span></div><p class="description__element">Ароматный лаваш правильной круглой формы - вот с чего начинается хороший денер.</p></div>
+                                        <div class="screen2__animation__motor description__block take_2"><div class="description__background"><span>20 сек.</span></div><p class="description__element">Наши авторские соусы - идеальное сочетание трав и специй. Они придают денеру особенный вкус.</p></div>
+                                        <div class="screen2__animation__motor description__block take_4"><div class="description__background"><span>40 сек.</span></div><p class="description__element">Свежие овощи делают денер сочным. В прямом смысле "пальчики оближешь”.</p></div>
+                                        <div class="screen2__animation__motor description__block take_6"><div class="description__background"><span>30 сек.</span></div><p class="description__element">Когда запеченую курочку снимают с гриля и смешивают с хрустящим луком, аромат стоит - не передать. Только пробовать.</p></div>
+                                        <div class="screen2__animation__motor description__block take_8"><div class="description__background"><span>20 сек.</span></div><p class="description__element">Томатный соус с зеленью отлично подходит к мясу.</p></div>
+                                        <div class="screen2__animation__motor description__block take_10"><div class="description__background"><span>10 сек.</span></div><p class="description__element">Осталось аккуратно завернуть денер, уложить на гриль….</p></div>
+                                        <div class="screen2__animation__motor description__block take_12"><div class="description__background"><span>50 сек.</span></div><p class="description__element">...и равномерно запечь.</p></div>
+                                        <div class="screen2__animation__motor description__block take_14"><div class="description__background1"><span>3 мин.</span></div><p class="description__element">Три минуты и ваш денер готов.</p></div>
+                                    </div>
+                                    <div class="input">
+                                        <div class="inputRange">
+                                            <div class="inputRange__item circle__before"></div>
+                                            <div class="inputRange__item circle__before"></div>
+                                            <div class="inputRange__item circle__before"></div>
+                                            <div class="inputRange__item circle__before"></div>
+                                            <div class="inputRange__item circle__before"></div>
+                                            <div class="inputRange__item circle__before"></div>
+                                            <div class="inputRange__item circle__before"></div>
+                                            <div class="inputRange__item circle__before"></div>
+                                            <div class="circle__before1"></div>
+                                            <div class="circle__before2"></div>
+                                        </div>
+                                        <input type="hidden" class="slider-input" value="0" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
     </div>
-    <div class="range range__elem2">
-      <h3 class="range__caption">Мексикан</h3><p class="range__description">Описание Мексиканского денера</p>
-      <img class="screen4__dener__animation" src="img/roll2.jpg" alt="Мексикан">
+    <div class="section section_three">
+        <div class="screen3">
+            <div class="screen3__container">
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="screen3__block1 screen3__block1__slide1"><h2 class="screen3__caption">Быстро</h2></div>
+                            <div class="screen3__block2 screen3__block2__slide1"><p class="screen3__offer">Недавно мы посчитали, что сделали почти 14 миллионов денеров. Так что, не сомневайтесь наши повара умеют делать их быстро.</p></div>
+                            <div class="screen3__block3 screen3__block3__slide1"><img class="slaid1" src="img/slaid1.jpg" alt="Первый слайд" width="100%" height="100%"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="screen3__block1 screen3__block1__slide2"><h2 class="screen3__caption">Вкусно</h2></div>
+                            <div class="screen3__block2 screen3__block2__slide2"><p class="screen3__offer">Мы не жарим, а запекаем мясо, используем только свежие овощи, готовим авторские соусы. Все честно, все на ваших глазах.</p></div>
+                            <div class="screen3__block3 screen3__block3__slide2">Картинка2</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="screen3__block1 screen3__block1__slide3"><h2 class="screen3__caption">Удобно</h2></div>
+                            <div class="screen3__block2 screen3__block2__slide3"><p class="screen3__offer">В офисе, в машине, в метро или на ходу - полноценный обед, где бы вы не находились.</p></div>
+                            <div class="screen3__block3 screen3__block3__slide3">Картинка2</div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="range range__elem3">
-      <h3 class="range__caption">Сырный</h3><p class="range__description">Описание Сырного денера</p>
-      <img class="screen4__dener__animation" src="img/roll3.jpg" alt="Сырный">
+    <div class="section section_four">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="screen4">
+                        <div class="screen4__header line">
+                            <h2 class="screen4__caption">
+                                Наш ассортимент
+                            </h2>
+                        </div>
+                        <div class="screen4__container">
+                            <div class="range range__block1 active">
+                                <div class="range__elem1" data-id="1"><h3 class="range__caption">Острый</h3></div>
+                                <div class="range__elem2"><p class="range__description">Описание Острого денера</p></div>
+                            </div>
+                            <div class="range range__block2">
+                                <div class="range__elem1" data-id="2"><h3 class="range__caption">Мексикан</h3></div>
+                                <div class="range__elem2"><p class="range__description">Описание Мексиканского денера</p></div>
+                            </div>
+                            <div class="range range__block3">
+                                <div class="range__elem1" data-id="3"><h3 class="range__caption">Сырный</h3></div>
+                                <div class="range__elem2"><p class="range__description">Описание Сырного денера</p></div>
+                            </div>
+                            <div class="range range__block4">
+                                <div class="range__elem1" data-id="4"><h3 class="range__caption">Классик</h3></div>
+                                <div class="range__elem2"><p class="range__description">Наш класический дёнер, начинка состоит из курицы гриль, сежих овощей и фирменного
+                                    чесночного соуса.
+                                    Подаётся в банете или в лаваше.</p></div>
+                            </div>
+                            <div class="range range__block5">
+                                <div class="range__elem1" data-id="5"><h3 class="range__caption">Деревенский</h3></div>
+                                <div class="range__elem2"><p class="range__description">Описание Деревенского денера</p></div>
+                            </div>
+                            <div class="range__block6">
+                                <div class="range__elem3 range__elem3_1 active"><img class="screen4__dener__animation" src="img/eroll1.jpg" alt="Острый"></div>
+                                <div class="range__elem3 range__elem3_2"><img class="screen4__dener__animation" src="img/eroll2.jpg" alt="Мексикан"></div>
+                                <div class="range__elem3 range__elem3_3"><img class="screen4__dener__animation" src="img/eroll3.jpg" alt="Сырный"></div>
+                                <div class="range__elem3 range__elem3_4"><img class="screen4__dener__animation" src="img/eroll4.jpg" alt="Классик"></div>
+                                <div class="range__elem3 range__elem3_5"><img class="screen4__dener__animation" src="img/eroll5.jpg" alt="Деревенский"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="range range__elem4">
-      <h3 class="range__caption">Классик</h3><p class="range__description">Наш класический дёнер, начинка состоит из курицы гриль, сежих овощей и фирменного
-      чесночного соуса.
-      Подаётся в банете или в лаваше.</p>
-      <img class="screen4__dener__animation" src="img/roll4.jpg" alt="Классик">
+    <div class="section section_five">
+        <div class="container1">
+            <div class="row">
+                <div class="col">
+                    <div class="screen5">
+                        <div class="screen5__header line">
+                            <h2 class="screen5__caption">
+                                Найдите ближайшее кафе
+                            </h2>
+                        </div>
+                        <div class="screen5__container">
+                            <div class="screen5__block2">
+                                <!--<a class="dg-widget-link" href="http://2gis.ru/novosibirsk/profiles/141265771055164,70000001023686568,70000001027418381,70000001024231790,141265771245919,70000001028309393,70000001027553420,70000001023490152,141265771746383,70000001025137811,141265771055161,141265770397919,141265771055162,141265771648731,141265771055159,141265771746376,70000001028266736,70000001026543169,70000001006448504,70000001006539274,70000001018449520,70000001018053149,141265772000822,141265771055165,141265771055157,70000001028541918,70000001007217561,70000001007447310,70000001018449524,141265771055158,70000001027558159,141265771055168,70000001007369367,70000001028266864,141265771163407,141266769965396,70000001025602380,70000001021506676,141265771755399,141265771055166,141265771055167,141265771061812,141265772000820,70000001020868239,141265772000823,141265771616710,70000001006448067,70000001006931803,141265771055163,70000001006448036,70000001006212655,70000001026156548,141265770558047,141265771746374,70000001028597578,70000001007121705,70000001026487615,70000001018197263,70000001006448119,70000001006513351,70000001022650203,141265771746380,70000001022913991,141265771900925,141265771061445,70000001006212767,70000001022650408,141265771560495,70000001028091651,70000001007121686,141265771746377,141265771161543,141265771464338,70000001022649870,141265771746375,141265772000819,70000001006447137,141265771427181,141265771236788,70000001023260560,70000001023497065,141266769712961,141266769579770,70000001018137336,70000001025111014,70000001022650364,70000001023109517,70000001022620705,70000001006402314,141265772001860,141266769702879,70000001020468626,70000001023792342,70000001029195685/center/82.96325683593751,54.95001975516278/zoom/10?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Новосибирска</a>-->
+                                <!--<script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>-->
+                                <!--<script charset="utf-8">new DGWidgetLoader({"width":600,"height":750,"borderColor":"#a3a3a3","pos":{"lat":54.95001975516278,"lon":82.96325683593751,"zoom":10},"opt":{"city":"novosibirsk"},"org":[{"id":"141265771055164"},{"id":"70000001023686568"},{"id":"70000001027418381"},{"id":"70000001024231790"},{"id":"141265771245919"},{"id":"70000001028309393"},{"id":"70000001027553420"},{"id":"70000001023490152"},{"id":"141265771746383"},{"id":"70000001025137811"},{"id":"141265771055161"},{"id":"141265770397919"},{"id":"141265771055162"},{"id":"141265771648731"},{"id":"141265771055159"},{"id":"141265771746376"},{"id":"70000001028266736"},{"id":"70000001026543169"},{"id":"70000001006448504"},{"id":"70000001006539274"},{"id":"70000001018449520"},{"id":"70000001018053149"},{"id":"141265772000822"},{"id":"141265771055165"},{"id":"141265771055157"},{"id":"70000001028541918"},{"id":"70000001007217561"},{"id":"70000001007447310"},{"id":"70000001018449524"},{"id":"141265771055158"},{"id":"70000001027558159"},{"id":"141265771055168"},{"id":"70000001007369367"},{"id":"70000001028266864"},{"id":"141265771163407"},{"id":"141266769965396"},{"id":"70000001025602380"},{"id":"70000001021506676"},{"id":"141265771755399"},{"id":"141265771055166"},{"id":"141265771055167"},{"id":"141265771061812"},{"id":"141265772000820"},{"id":"70000001020868239"},{"id":"141265772000823"},{"id":"141265771616710"},{"id":"70000001006448067"},{"id":"70000001006931803"},{"id":"141265771055163"},{"id":"70000001006448036"},{"id":"70000001006212655"},{"id":"70000001026156548"},{"id":"141265770558047"},{"id":"141265771746374"},{"id":"70000001028597578"},{"id":"70000001007121705"},{"id":"70000001026487615"},{"id":"70000001018197263"},{"id":"70000001006448119"},{"id":"70000001006513351"},{"id":"70000001022650203"},{"id":"141265771746380"},{"id":"70000001022913991"},{"id":"141265771900925"},{"id":"141265771061445"},{"id":"70000001006212767"},{"id":"70000001022650408"},{"id":"141265771560495"},{"id":"70000001028091651"},{"id":"70000001007121686"},{"id":"141265771746377"},{"id":"141265771161543"},{"id":"141265771464338"},{"id":"70000001022649870"},{"id":"141265771746375"},{"id":"141265772000819"},{"id":"70000001006447137"},{"id":"141265771427181"},{"id":"141265771236788"},{"id":"70000001023260560"},{"id":"70000001023497065"},{"id":"141266769712961"},{"id":"141266769579770"},{"id":"70000001018137336"},{"id":"70000001025111014"},{"id":"70000001022650364"},{"id":"70000001023109517"},{"id":"70000001022620705"},{"id":"70000001006402314"},{"id":"141265772001860"},{"id":"141266769702879"},{"id":"70000001020468626"},{"id":"70000001023792342"},{"id":"70000001029195685"}]});</script>-->
+                                <!--<noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>-->
+
+                                <div  id="map" style="width:100vw; height: 75vh"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="range range__elem5">
-      <h3 class="range__caption">Деревенский</h3><p class="range__description">Описание Деревенского денера</p>
-      <img class="screen4__dener__animation" src="img/roll5.jpg" alt="Деревенский">
-    </div>
-  </section>
-  <section class="screen5">
-    <h2 class="screen5__caption">Найдите ближайшее кафе</h2>
-    <div class="screen5__search">
-      <input class="screen5__search__input search__input__item" id="search_input" type="text" name="search" value="Введите ваше местоположение">
-    </div>
-    <label class="search__item" for="search_input">Поиск</label>
-    <div class="map__class" id="map">n</div>
-  </section>
 </main>
 <footer class="footer">
-  <section class="footer__copyright">
-    &copy; Дядя Денер
-  </section>
-  <section class="footer-contact">
-    <section class="footer__number">8 (383) 240-86-04</section>
-    <section class="footer__social social">
-      <a class="social__btn social__btn__vk" href="#">Вконтакте</a>
-      <a class="social__btn social__btn__inst" href="#">Инстаграмм</a>
-      <a class="social__btn social__btn__fb" href="#">Фейсбук</a>
-    </section>
-  </section>
-  <section class="footer__developer">
-    Разработка сайта
-  </section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="footer__skin">
+                    <section class="footer__copyright">
+                        &copy; Дядя Денер
+                    </section>
+                    <section class="footer__contact">
+                        <section class="footer__number">8 (383) 240-86-04</section>
+                        <section class="footer__social social">
+                            <a class="social__btn social__btn__vk" href="#">Вконтакте</a>
+                            <a class="social__btn social__btn__inst" href="#">Инстаграмм</a>
+                            <a class="social__btn social__btn__fb" href="#">Фейсбук</a>
+                        </section>
+                    </section>
+                    <section class="footer__developer">
+                        Разработка сайта
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
-<script type="text/javascript" src="js/script.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnHwSo1FD67VVDX1hGzNeucLZFJnf-l8A&callback=initMap"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.1/rangeslider.js"></script>
+<script src="js/jquery.range.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
