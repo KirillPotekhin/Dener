@@ -237,7 +237,7 @@ body {
   z-index: 2;
   animation: animText 1s ease;
   animation-fill-mode:forwards;
-  animation-delay: 1s;
+  animation-delay: 1.5s;
   opacity: 0;
 }
 
@@ -264,7 +264,7 @@ body {
   z-index: 1;
   animation: animUp 1s ease;
   animation-fill-mode:forwards;
-  animation-delay: 1s;
+  animation-delay: 1.5s;
   opacity: 0;
   width: 50vw;
   height: 50vw;
