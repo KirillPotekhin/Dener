@@ -1,7 +1,8 @@
 var mapInited = false;
 
+
 $(window).on('scroll', function() {
-    if ($(window).scrollTop() > ($('body').height() - $(window).height() * 1.9) && !mapInited){
+    if ($(window).scrollTop() > ($('body').height() - $(window).height() * 1,9) && !mapInited){
         mapInited = true;
         DG.then(function() {
             var map;
@@ -64,15 +65,12 @@ $( document ).ready(function() {
             if (value%2===0) {
                 $('.screen2__animation__motor').removeClass('active');
                 $('.screen2__animation__motor.take_' + value).addClass('active');
-                // $('.inputRange__item').removeClass('circle__after');
-                // $('.inputRange__item').each(function(index, elem) {
-                //     if ((index%2==0) && (value%2==0)) {
-                //         console.log(1)
-                //         // if (index < value) {
-                //         //     $(elem).addClass('circle__after');
-                //         }
-                //     // }
-                // })
+                $('.inputRange__item').removeClass('circle__after');
+                $('.inputRange__item').each(function(index, elem) {
+                    if (index < value/2+1) {
+                        $(elem).addClass('circle__after');
+                    }
+                })
             }
 
         },
@@ -101,13 +99,38 @@ $( document ).ready(function() {
         paginationType: 'progress',
     });
 
-    $('.range__elem1').click(function (e) {
+    $('.range__elem1').hover(function (e) {
         var id = $(this).data('id');
         $('.range').removeClass('active');
         $('.range__elem3').removeClass('active');
         $(this).closest('.range').addClass('active');
         $('.range__elem3_' + id).addClass('active');
     })
+
+    function callback() {
+        var width = $(window).width();
+        var pageheight = $('#fullpage').height();
+        var rate =   2;
+        var height = width / rate ;
+        $('.screen1').height(height);
+        $('.background').height(pageheight);
+        // if (width<960) {$('body').css('font-size', '10px')};
+        // if (width>1300) {$('body').css('font-size', '25px')}
+    }
+
+    $(window).on('resize', function() {
+        var width = $(window).width();
+        var rate =   2.627;
+        var height = width / rate ;
+        $('.screen1').height(height);
+        if (width<960) {$('body').css('font-size', '5px')};
+        // if (width<460) {$('body').css('font-size', '2px')};
+        // if (width>960) {$('body').css('font-size', '14px')};
+
+        // if (width>1200) {$('body').css('font-size', '25')}
+    })
+
+    callback();
 
 });
 

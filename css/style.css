@@ -23,7 +23,8 @@
 body {
   font-family: "UniNeue", "Arial", sans-serif;
   font-size: 14px;
-  background: url("../img/background.jpg") no-repeat -25px 51px;
+  background: url(../img/background.jpg) no-repeat -125px 716px;
+  cursor: url(../img/scroll.png) 50 50, auto;
 }
 
 .header {
@@ -72,7 +73,16 @@ body {
   line-height: normal;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
+}
+
+.screen4__offer {
+  font-size: 1.29rem;
+  font-weight: normal;
+  line-height: normal;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 80px;
 }
 
 .screen4__caption {
@@ -85,6 +95,15 @@ body {
   font-size: 1.43rem;
   font-weight: bold;
   line-height: normal;
+  cursor: pointer;
+}
+
+.range__caption:hover {
+  color: #ffde00;
+}
+
+.range.active .range__caption {
+  color: #ffde00;
 }
 
 .range__description {
@@ -97,6 +116,7 @@ body {
   font-size: 3.22rem;
   font-weight: bold;
   line-height: normal;
+  margin-bottom: 80px;
 }
 
 .map__class {
@@ -188,7 +208,8 @@ body {
   background: url("../img/heder_background.jpg") no-repeat;
   background-size: cover;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
+  height: 100vh;
 }
 
 .screen1 {
@@ -208,14 +229,43 @@ body {
   z-index: 3;
 }
 
+.screen1__slogan {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-40%);
+  z-index: 2;
+  animation: animText 1s ease;
+  animation-fill-mode:forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+@-webkit-keyframes animText {
+  0% {
+    top: 70%;
+    opacity: 0;
+  }
+  50% {
+    top: 60%;
+    opacity: 1;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
 .screen1__dish {
   position: absolute;
-  bottom: -100%;
+  bottom: 0;
   left: 50%;
   transform: translateX(-40%);
   z-index: 1;
   animation: animUp 1s ease;
   animation-fill-mode:forwards;
+  animation-delay: 1s;
+  opacity: 0;
   width: 50vw;
   height: 50vw;
   background: url("../img/header_dener.png") no-repeat;
@@ -225,10 +275,19 @@ body {
 
 @-webkit-keyframes animUp {
   0% {
-    bottom: -100%;
+    bottom: -75%;
+    left: 75%;
+    opacity: 0;
+  }
+  50% {
+    bottom: -37.5%;
+    left: 65%;
+    opacity: 1;
   }
   100% {
     bottom: 0;
+    left: 50%;
+    opacity: 1;
   }
 }
 
@@ -240,6 +299,10 @@ a {
 a:hover {
   color: #f8f810;
   text-decoration: underline;
+}
+
+.section.section_second {
+  margin-bottom: 60px;
 }
 
 .screen2__animation {
@@ -263,7 +326,6 @@ a:hover {
   width: 575px;
   opacity: 0;
   height: 0;
-  transition: opacity 0.3s ease 0.3s;
   transform: rotate(270deg);
 }
 
@@ -274,8 +336,6 @@ a:hover {
 .screen2__animation__img.active {
   opacity: 1;
   height: auto;
-  transition: opacity 0.3s ease 0.3s;
-
 }
 
 .screen2__animation__motor {
@@ -296,10 +356,10 @@ a:hover {
 .description__background {
   position: absolute;
   top: 30%;
-  left: -9%;
+  left: -35px;
   font-size: 10rem;
   font-weight: bold;
-  transform: translateX(24%);
+  transform: translateX(35px);
   opacity: 0.2;
   z-index: 1;
 }
@@ -307,23 +367,24 @@ a:hover {
 .description__background1 {
   position: absolute;
   top: 30%;
-  left: -9%;
+  left: 23px;
   font-size: 10rem;
   font-weight: bold;
-  transform: translateX(30%);
+  transform: translateX(0);
   opacity: 0.2;
   z-index: 1;
 }
 
 .description__element {
   z-index: 2;
-  width: 390px;
+  width: 340px;
   height: 300px;
-  font-size: 1.57rem;
+  font-size: 1.43rem;
   font-weight: normal;
+  text-align: left;
   position: absolute;
   top: 40%;
-  left: 24%;
+  left: 18%;
   transform: translateY(40%);
 }
 
@@ -353,7 +414,7 @@ a:hover {
   position: relative;
   width: 485px;
   padding-top: 30px;
-  padding-left: 70px;
+  padding-left: 2px;
 }
 
 .inputRange {
@@ -407,8 +468,9 @@ a:hover {
 }
 
 .swiper-container {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
   background: #f1f1f1;
 }
 
@@ -443,6 +505,7 @@ a:hover {
 .swiper-button-next, .swiper-button-prev {
   position: absolute;
   top: 50%;
+  right: 0;
   width: 41px;
   height: 29px;
   margin-top: -22px;
@@ -462,8 +525,9 @@ a:hover {
   font-size: 1.29rem;
   font-weight: normal;
   line-height: normal;
-  padding: 40px 80px;
+  padding: 4% 8%;
   margin: 0;
+  background: white;
 }
 
 .swiper-slide {
@@ -480,9 +544,11 @@ a:hover {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-35%);
-  width: 605px;
-  height: 150px;
+  transform: translateX(-37.3%);
+  width: 46.5%;
+  height: 23%;
+  text-align: left;
+
 }
 
 .screen3__block1__slide2 {
@@ -495,8 +561,10 @@ a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 605px;
-  height: 150px;
+  width: 51%;
+  height: 26%;
+  background: white;
+  text-align: left;
 }
 
 .screen3__block1__slide3 {
@@ -509,8 +577,9 @@ a:hover {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 605px;
-  height: 150px;
+  width: 46%;
+  height: 23%;
+  text-align: left;
 }
 
 .range__elem3 {
@@ -526,13 +595,17 @@ a:hover {
 }
 
 .screen4 {
-  height: 100vh;
+  height: 850px;
 }
 
 .screen4__container {
   position: relative;
   height: 80vh;
 }
+
+/*.section__five {*/
+  /*margin-top: 100px;*/
+/*}*/
 
 .range__block1 {
   position: absolute;
@@ -610,3 +683,57 @@ a:hover {
   opacity: 1;
   transition: opacity 0.9s ease;
 }
+
+/*.parallax {*/
+  /*perspective: 1px;*/
+  /*height: 100vh;*/
+  /*overflow-x: hidden;*/
+  /*overflow-y: auto;*/
+/*}*/
+
+/*.parallax__group {*/
+  /*position: relative;*/
+  /*height: 100vh;*/
+  /*transform-style: preserve-3d;*/
+/*}*/
+
+/*.parallax__layer {*/
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*right: 0;*/
+  /*bottom: 0;*/
+  /*left: 0;*/
+/*}*/
+/*.parallax__layer--base {*/
+  /*transform: translateZ(0);*/
+/*}*/
+
+/*.parallax__layer--back {*/
+  /*transform: translateZ(-1px) scale(2);*/
+/*}*/
+
+/*.background {*/
+  /*width: 100%;*/
+  /*background: url(../img/background.jpg) no-repeat -125px 616px;*/
+/*}*/
+
+
+
+.theme-green .back-bar .pointer {
+  width: 70px;
+  height: 70px;
+  top: -35px;
+  box-sizing: border-box;
+  content: url(../img/clicker1.png);
+  z-index: 10;
+}
+
+.theme-green .back-bar .pointer:active {
+  width: 70px;
+  height: 70px;
+  top: -35px;
+  box-sizing: border-box;
+  content: url(../img/clicker2.png);
+  z-index: 10;
+}
+
