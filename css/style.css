@@ -24,13 +24,17 @@ body {
   font-family: "UniNeue", "Arial", sans-serif;
   font-size: 14px;
   background: url(../img/background.jpg) no-repeat -125px 716px;
-  cursor: url(../img/scroll.png) 50 50, auto;
+
 }
 
 .header {
   margin: 0 auto;
   padding: 0;
   background: url("../img/heder_background.jpg") no-repeat;
+}
+
+.screen1 {
+  cursor: url(../img/scroll.png) 50 50, auto;
 }
 
 .screen1__slogan {
@@ -258,7 +262,7 @@ body {
 
 .screen1__dish {
   position: absolute;
-  bottom: 0;
+  bottom: -100%;
   left: 50%;
   transform: translateX(-40%);
   z-index: 1;

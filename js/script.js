@@ -2,6 +2,7 @@ var mapInited = false;
 
 
 $(window).on('scroll', function() {
+
     if ($(window).scrollTop() > ($('body').height() - $(window).height() * 1,9) && !mapInited){
         mapInited = true;
         DG.then(function() {
@@ -112,8 +113,8 @@ $( document ).ready(function() {
         var pageheight = $('#fullpage').height();
         var rate =   2;
         var height = width / rate ;
-        $('.screen1').height(height);
-        $('.background').height(pageheight);
+        // $('.screen1').height(height);
+        // $('.background').height(pageheight);
         // if (width<960) {$('body').css('font-size', '10px')};
         // if (width>1300) {$('body').css('font-size', '25px')}
     }
@@ -122,7 +123,7 @@ $( document ).ready(function() {
         var width = $(window).width();
         var rate =   2.627;
         var height = width / rate ;
-        $('.screen1').height(height);
+        // $('.screen1').height(height);
         if (width<960) {$('body').css('font-size', '5px')};
         // if (width<460) {$('body').css('font-size', '2px')};
         // if (width>960) {$('body').css('font-size', '14px')};
