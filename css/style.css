@@ -23,7 +23,7 @@
 body {
   font-family: "UniNeue", "Arial", sans-serif;
   font-size: 14px;
-  background: url(../img/background.jpg) no-repeat -125px 717px;
+  background: url(../img/background.jpg) no-repeat -125px 817px;
 
 }
 
@@ -47,12 +47,14 @@ body {
   line-height: 3.58rem;
   z-index: 5;
   margin-bottom: 35px;
+  color: #ffde00;
 }
 
 .screen1__offer {
   font-size: 1.58rem;
   font-weight: normal;
   line-height: normal;
+  color: #ffde00;
 }
 
 .section_second .container .row .col {
@@ -121,6 +123,7 @@ body {
   font-weight: bold;
   line-height: normal;
   margin-bottom: 80px;
+  margin-top: 250px;
 }
 
 .map__class {
@@ -669,12 +672,12 @@ a:hover {
 
 .range__elem2 {
   opacity: 0;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.3s ease;
 }
 
 .range.active .range__elem2 {
   opacity: 1;
-  transition: opacity 0.6s ease 0.6s;
+  transition: opacity 0.3s ease 0.3s;
 }
 
 .range__elem3 {
