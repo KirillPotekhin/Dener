@@ -155,14 +155,14 @@ $( document ).ready(function() {
         // if (width>1300) {$('body').css('font-size', '25px')}
     // }
 
-    // $(window).on('resize', function() {
-    //     var width = $(window).width();
-    //     var pageheight = $(window).height() * 0.99;
-    //     var rate =   1.671428571428571;
-    //     // var height = width / rate;
-    //     var height = width / rate;
-    //     $('.swiper-container').height(height);
-    // })
+    $(window).on('resize', function() {
+        var width = $(window).width();
+        var pageheight = $(window).height() * 0.99;
+        var rate =   1.671428571428571;
+        // var height = width / rate;
+        var height = width / rate;
+        $('.swiper-container').height(height);
+    })
 
     // callback();
 
