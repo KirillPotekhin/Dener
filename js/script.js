@@ -2,8 +2,7 @@ var mapInited = false;
 
 
 $(window).on('scroll', function() {
-
-    if ($(window).scrollTop() > ($('body').height() - $(window).height() * 1,9) && !mapInited){
+    if (($(window).scrollTop() > $(document).height() - $(window).height() * 1.5) && !mapInited){
         mapInited = true;
         DG.then(function() {
             var map;
@@ -31,6 +30,8 @@ $(window).on('scroll', function() {
 
         });
     }
+    var parallaxOffset = $(window).scrollTop() * -0.5;
+    $('.parallax__layer--back').css({'background-position': `0px ${parallaxOffset}px`})
 })
 
 
@@ -57,12 +58,15 @@ $(window).on('scroll', function() {
 // });
 
 $( document ).ready(function() {
-
-    $('.slider-input').jRange({
+        var slide = 0;
+        var slideInterval;
+        var slider = $('.slider-input').jRange({
         onstatechange: function (value) {
+            slide = value;
+            clearInterval(slideInterval);
+            runTimer();
             $('.screen2__animation__img').removeClass('active');
             $('.screen2__animation__img.take_' + value).addClass('active');
-
             if (value%2===0) {
                 $('.screen2__animation__motor').removeClass('active');
                 $('.screen2__animation__motor.take_' + value).addClass('active');
@@ -85,7 +89,24 @@ $( document ).ready(function() {
         showLabels: false,
         snap: true,
         showScale: false,
+    });
+    function runTimer() {
+        slideInterval = setInterval(function () {
+            slider.jRange('setValue', slide.toString());
+            if (slide === '14') {
+                slide = 0;
+            } else {
+                slide++;
+            }
+        }, 3000);
+    }
 
+    var sliderInited = false;
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > $(window).height() && !sliderInited) {
+            runTimer();
+            sliderInited = true;
+        }
     });
 
     var mySwiper = new Swiper ('.swiper-container', {
@@ -106,7 +127,7 @@ $( document ).ready(function() {
         $('.range__elem3').removeClass('active');
         $(this).closest('.range').addClass('active');
         $('.range__elem3_' + id).addClass('active');
-    })
+    });
 
     function callback() {
         var width = $(window).width();
@@ -124,7 +145,7 @@ $( document ).ready(function() {
         var rate =   2.627;
         var height = width / rate ;
         // $('.screen1').height(height);
-        if (width<960) {$('body').css('font-size', '5px')};
+        // if (width<960) {$('body').css('font-size', '5px')};
         // if (width<460) {$('body').css('font-size', '2px')};
         // if (width>960) {$('body').css('font-size', '14px')};
 

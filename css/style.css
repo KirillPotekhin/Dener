@@ -22,9 +22,17 @@
 
 body {
   font-family: "UniNeue", "Arial", sans-serif;
-  font-size: 14px;
-  background: url(../img/background.jpg) no-repeat -125px 817px;
+  /*background: url(../img/background.jpg) no-repeat -125px 817px;*/
+}
 
+html {
+  font-size: 14px;
+}
+
+@media (max-width: 960px) {
+  html {
+    font-size: 10px;
+  }
 }
 
 .header {
@@ -724,6 +732,19 @@ a:hover {
   /*background: url(../img/background.jpg) no-repeat -125px 616px;*/
 /*}*/
 
+.parallax__layer--back {
+  width: 100vw;
+  height: 100vh;
+  background: red;
+  position: fixed;
+  z-index: 0;
+  background: url(../img/background.jpg) no-repeat 0 0;
+}
+
+.parallax__layer--base {
+  position: relative;
+  z-index: 1;
+}
 
 
 .theme-green .back-bar .pointer {
