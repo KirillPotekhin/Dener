@@ -32,7 +32,7 @@ $(window).on('scroll', function() {
     // }
 
     var parallaxOffset = $(window).scrollTop() * -0.5;
-    $('.parallax__layer--back').css({'background-position': `-86px ${parallaxOffset}px`})
+    $('.parallax__layer--back').css({'background-position': `0 ${parallaxOffset}px`})
 
 
 })
@@ -60,6 +60,12 @@ $(window).on('scroll', function() {
 
 
 $( document ).ready(function() {
+        var width = $(window).width();
+        var rate1 = 2.76657060518732;
+        var height1 = width / rate1;
+        $('.screen1').height(height1);
+        $('.section_first').height(height1);
+
         var slide = 0;
         var slideInterval;
         var slider = $('.slider-input').jRange({
@@ -83,9 +89,9 @@ $( document ).ready(function() {
         },
 
         from: 0,
-        to: 12,
+        to: 14,
         step: 1,
-        scale: [0,1,2,3,4,5,6,7,8,9,10,11,12],
+        scale: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
         format: '%s',
         width: 485,
         showLabels: false,
@@ -95,7 +101,7 @@ $( document ).ready(function() {
     function runTimer() {
         slideInterval = setInterval(function () {
             slider.jRange('setValue', slide.toString());
-            if (slide === '12') {
+            if (slide === '14') {
                 slide = 0;
             } else {
                 slide++;
@@ -128,13 +134,13 @@ $( document ).ready(function() {
 
     });
 
-    $('.swiper-button-prev').click(function () {
-        $('.screen3__block2').css({'opacity': '0'})
-    });
-
-    $('.swiper-button-next').click(function () {
-        $('.screen3__block2').css({'opacity': '0'})
-    });
+    // $('.swiper-button-prev').click(function () {
+    //     $('.screen3__block2').css({'opacity': '0'})
+    // });
+    //
+    // $('.swiper-button-next').click(function () {
+    //     $('.screen3__block2').css({'opacity': '0'})
+    // });
 
     $('.range__elem1').hover(function (e) {
         var id = $(this).data('id');
@@ -158,10 +164,17 @@ $( document ).ready(function() {
     $(window).on('resize', function() {
         var width = $(window).width();
         var pageheight = $(window).height() * 0.99;
-        var rate =   1.671428571428571;
+        // var rate =   1.671428571428571;
+        var rate = 2.1;
+        var rate1 = 2.76657060518732;
         // var height = width / rate;
         var height = width / rate;
+        var height1 = width / rate1;
         $('.swiper-container').height(height);
+        $('.screen1').height(height1);
+        $('.section_first').height(height1);
+
+        // $('.swiper-container').css('overflow: hidden');
     })
 
     // callback();
