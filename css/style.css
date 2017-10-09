@@ -142,6 +142,7 @@ html {
   font-size: 1.15rem;
   font-weight: normal;
   line-height: normal;
+  transform: translateX(-3rem);
 }
 
 .screen5__caption {
@@ -857,6 +858,7 @@ a:hover {
   position: fixed;
   z-index: 0;
   background: url(../img/background.jpg) no-repeat 0 0;
+  /*box-sizing: content-box;*/
 }
 
 .parallax__layer--base {
