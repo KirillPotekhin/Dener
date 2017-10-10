@@ -290,7 +290,7 @@ html {
   z-index: 2;
   animation: animText 1s ease;
   animation-fill-mode:forwards;
-  animation-delay: 1.5s;
+  animation-delay: 2.5s;
   opacity: 0;
 }
 
@@ -317,7 +317,7 @@ html {
   z-index: 1;
   animation: animUp 1s ease;
   animation-fill-mode:forwards;
-  animation-delay: 1.5s;
+  animation-delay: 2.5s;
   opacity: 0;
   width: 32rem;
   height: 32rem;
