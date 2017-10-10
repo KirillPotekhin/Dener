@@ -61,10 +61,24 @@ $(window).on('scroll', function() {
 
 $( document ).ready(function() {
         var width = $(window).width();
-        var rate1 = 2.76657060518732;
+        var heighton = $(window).height();
+        var heightvalue = width / heighton;
+        var rate1 = 2.1;
+        // var rate1 = 2.76657060518732;
         var height1 = width / rate1;
-        $('.screen1').height(height1);
-        $('.section_first').height(height1);
+        if (heightvalue > 2) {
+            console.log(2);
+            $('.screen1').css({'height': `100vh`});
+            $('.section_first').css({'height': `100vh`});
+        } else {
+            console.log(1);
+            $('.screen1').height(height1);
+            $('.section_first').height(height1);
+        }
+
+        var rate = 2.1;
+        var height = width / rate;
+        $('.swiper-container').height(height);
 
         var slide = 0;
         var slideInterval;
@@ -123,6 +137,8 @@ $( document ).ready(function() {
         loop: true,
         speed: 700,
         spaceBetween: 100,
+        autoplay: 5000,
+        autoplayDisableOnInteraction: false,
         pagination: '.swiper-pagination',
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
@@ -139,7 +155,8 @@ $( document ).ready(function() {
     // });
     //
     // $('.swiper-button-next').click(function () {
-    //     $('.screen3__block2').css({'opacity': '0'})
+    //     $('.screen3__block').removeClass('animText1');
+    //     $('.screen3__block').addClass('animText1');
     // });
 
     $('.range__elem1').hover(function (e) {
@@ -163,18 +180,38 @@ $( document ).ready(function() {
 
     $(window).on('resize', function() {
         var width = $(window).width();
-        var pageheight = $(window).height() * 0.99;
-        // var rate =   1.671428571428571;
-        var rate = 2.1;
-        var rate1 = 2.76657060518732;
-        // var height = width / rate;
-        var height = width / rate;
+        var heighton = $(window).height();
+        var heightvalue = width / heighton;
+        var rate1 = 2.1;
+        // var rate1 = 2.76657060518732;
         var height1 = width / rate1;
-        $('.swiper-container').height(height);
-        $('.screen1').height(height1);
-        $('.section_first').height(height1);
+        if (heightvalue > 2) {
+            console.log(2);
+            $('.screen1').css({'height': `100vh`});
+            $('.section_first').css({'height': `100vh`});
+        } else {
+            console.log(1);
+            $('.screen1').height(height1);
+            $('.section_first').height(height1);
+        }
 
-        // $('.swiper-container').css('overflow: hidden');
+        var rate = 2.1;
+        var height = width / rate;
+        $('.swiper-container').height(height);
+
+
+        // var width = $(window).width();
+        // // var rate =   1.671428571428571;
+        // var rate = 2.1;
+        // var rate1 = 2.1;
+        // // var height = width / rate;
+        // var height = width / rate;
+        // var height1 = width / rate1;
+        // $('.swiper-container').height(height);
+        // $('.screen1').height(height1);
+        // $('.section_first').height(height1);
+
+        $('.swiper-container').css('overflow: hidden');
     })
 
     // callback();
