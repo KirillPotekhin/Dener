@@ -300,7 +300,7 @@ html {
     opacity: 0;
   }
   50% {
-    top: 60%;
+    /*top: 60%;*/
     opacity: 1;
   }
   100% {
@@ -332,11 +332,11 @@ html {
     left: 75%;
     opacity: 0;
   }
-  50% {
-    bottom: -37.5%;
-    left: 65%;
-    opacity: 1;
-  }
+  /*50% {*/
+    /*bottom: -37.5%;*/
+    /*left: 65%;*/
+    /*opacity: 1;*/
+  /*}*/
   100% {
     bottom: 0;
     left: 50%;
