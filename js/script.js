@@ -61,6 +61,7 @@ $(window).on('scroll', function() {
 
 $( document ).ready(function() {
         var width = $(window).width();
+        var width1024 = 1024;
         var heighton = $(window).height();
         var heightvalue = width / heighton;
         var rate1 = 2.1;
@@ -82,36 +83,202 @@ $( document ).ready(function() {
 
         var slide = 0;
         var slideInterval;
-        var slider = $('.slider-input').jRange({
-        onstatechange: function (value) {
-            slide = value;
-            clearInterval(slideInterval);
-            runTimer();
-            $('.screen2__animation__img').removeClass('active');
-            $('.screen2__animation__img.take_' + value).addClass('active');
-            if (value%2===0) {
-                $('.screen2__animation__motor').removeClass('active');
-                $('.screen2__animation__motor.take_' + value).addClass('active');
-                $('.inputRange__item').removeClass('circle__after');
-                $('.inputRange__item').each(function(index, elem) {
-                    if (index < value/2+1) {
-                        $(elem).addClass('circle__after');
+        // var widthslider = $('.screen2__animation_right').css({'width': `34rem`});
+        var widthslider = $('.screen2__animation_right').width('34rem');
+        // console.log(widthslider);
+
+        if (width > 1025) {
+            var slider = $('.slider-input').jRange({
+                onstatechange: function (value) {
+                    slide = value;
+                    clearInterval(slideInterval);
+                    runTimer();
+                    $('.screen2__animation__img').removeClass('active');
+                    $('.screen2__animation__img.take_' + value).addClass('active');
+                    if (value%2===0) {
+                        $('.screen2__animation__motor').removeClass('active');
+                        $('.screen2__animation__motor.take_' + value).addClass('active');
+                        $('.inputRange__item').removeClass('circle__after');
+                        $('.inputRange__item').each(function(index, elem) {
+                            if (index < value/2+1) {
+                                $(elem).addClass('circle__after');
+                            }
+                        })
                     }
-                })
-            }
+                },
+                from: 0,
+                to: 14,
+                step: 1,
+                scale: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+                format: '%s',
+                width: 485,
+                showLabels: false,
+                snap: true,
+                showScale: false,
+            });
+            $('.input').css(
+                'margin', '0 auto'
+            );
 
-        },
+            $('.screen2__animation__img').css(
+                'width', '80%',
+            );
 
-        from: 0,
-        to: 14,
-        step: 1,
-        scale: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
-        format: '%s',
-        width: 485,
-        showLabels: false,
-        snap: true,
-        showScale: false,
-    });
+
+        } else {
+            $('.input').css('width', '207px');
+            $('.inputRange').css('width', '207px');
+            var slider = $('.slider-input').jRange({
+                onstatechange: function (value) {
+                    slide = value;
+                    clearInterval(slideInterval);
+                    runTimer();
+                    $('.screen2__animation__img').removeClass('active');
+                    $('.screen2__animation__img.take_' + value).addClass('active');
+                    if (value%2===0) {
+                        $('.screen2__animation__motor').removeClass('active');
+                        $('.screen2__animation__motor.take_' + value).addClass('active');
+                        $('.inputRange__item').removeClass('circle__after');
+                        $('.inputRange__item').each(function(index, elem) {
+                            if (index < value/2+1) {
+                                $(elem).addClass('circle__after');
+                            }
+                        })
+                    }
+
+                },
+                from: 0,
+                to: 14,
+                step: 1,
+                scale: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+                format: '%s',
+                width: 207,
+
+                showLabels: false,
+                snap: true,
+                showScale: false,
+            });
+            $('.swiper-button-next, .swiper-button-prev').css(
+                // 'width', '100%',
+                'top', '60%',
+            );
+            $('.screen2__animation__img').css(
+                'width', '60%',
+            );
+            $('.screen4').css(
+                'height', '73rem',
+            );
+        }
+
+    if (width < 440) {
+        $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
+            'bottom', '3%'
+        );
+        $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
+            'height', '20%'
+        );
+        $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
+            'width', '50%'
+        );
+        $('.screen3__block1').css(
+            'left', '10%'
+        );
+
+        $('.range__block1').css(
+            'top', '0'
+        );
+        $('.range__block1').css(
+            'left', '30%'
+        );
+        $('.range__block2').css(
+            'top', '0'
+        );
+        $('.range__block2').css(
+            'left', '-3%'
+        );
+        $('.range__block3').css(
+            'top', '60%'
+        );
+        $('.range__block3').css(
+            'left', '10%'
+        );
+        $('.range__block4').css(
+            'top', '0'
+        );
+        $('.range__block4').css(
+            'left', '63%'
+        );
+        $('.range__block5').css(
+            'top', '60%'
+        );
+        $('.range__block5').css(
+            'left', '45%'
+        );
+        $('.range__block6').css(
+            'top', '0'
+        );
+        $('.screen5__caption').css(
+            'margin-top', '23.86rem'
+        );
+    } else {
+        $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
+            'bottom', '5%'
+        );
+        $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
+            'height', '10%'
+        );
+        $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
+            'width', '47.5%'
+        );
+        $('.screen3__block1').css(
+            'left', '15%'
+        );
+
+        $('.range__block1').css(
+            'top', '0'
+        );
+        $('.range__block1').css(
+            'left', '30%'
+        );
+        $('.range__block2').css(
+            'top', '35%'
+        );
+        $('.range__block2').css(
+            'left', '0'
+        );
+        $('.range__block3').css(
+            'top', '80%'
+        );
+        $('.range__block3').css(
+            'left', '15%'
+        );
+        $('.range__block4').css(
+            'top', '15%'
+        );
+        $('.range__block4').css(
+            'left', '70%'
+        );
+        $('.range__block5').css(
+            'top', '55%'
+        );
+        $('.range__block5').css(
+            'left', '80%'
+        );
+        $('.range__block6').css(
+            'top', '25%'
+        );
+        $('.screen5__caption').css(
+            'margin-top', '23.86rem'
+        );
+    }
+
+    if (width > 767) {
+        $('.screen2__animation__img').css(
+            'width', '80%',
+        );
+    }
+
+
     function runTimer() {
         slideInterval = setInterval(function () {
             slider.jRange('setValue', slide.toString());
@@ -150,15 +317,6 @@ $( document ).ready(function() {
 
     });
 
-    // $('.swiper-button-prev').click(function () {
-    //     $('.screen3__block2').css({'opacity': '0'})
-    // });
-    //
-    // $('.swiper-button-next').click(function () {
-    //     $('.screen3__block').removeClass('animText1');
-    //     $('.screen3__block').addClass('animText1');
-    // });
-
     $('.range__elem1').hover(function (e) {
         var id = $(this).data('id');
         $('.range').removeClass('active');
@@ -167,18 +325,8 @@ $( document ).ready(function() {
         $('.range__elem3_' + id).addClass('active');
     });
 
-    // function callback() {
-    //     var width = $(window).width();
-    //     var pageheight = $(window).height();
-    //     var rate =   1.671428571428571;
-    //     var height = width / rate ;
-    //     $('.swiper-container').height(height);
-        // $('.background').height(pageheight);
-        // if (width<960) {$('body').css('font-size', '10px')};
-        // if (width>1300) {$('body').css('font-size', '25px')}
-    // }
-
     $(window).on('resize', function() {
+        console.log($('html').css('font-size'));
         var width = $(window).width();
         var heighton = $(window).height();
         var heightvalue = width / heighton;
@@ -189,6 +337,7 @@ $( document ).ready(function() {
             console.log(2);
             $('.screen1').css({'height': `100vh`});
             $('.section_first').css({'height': `100vh`});
+
         } else {
             console.log(1);
             $('.screen1').height(height1);
@@ -199,20 +348,337 @@ $( document ).ready(function() {
         var height = width / rate;
         $('.swiper-container').height(height);
 
-
-        // var width = $(window).width();
-        // // var rate =   1.671428571428571;
-        // var rate = 2.1;
-        // var rate1 = 2.1;
-        // // var height = width / rate;
-        // var height = width / rate;
-        // var height1 = width / rate1;
-        // $('.swiper-container').height(height);
-        // $('.screen1').height(height1);
-        // $('.section_first').height(height1);
-
         $('.swiper-container').css('overflow: hidden');
-    })
+
+        if (width > 1025) {
+            var slider = $('.slider-input').jRange({
+                onstatechange: function (value) {
+                    slide = value;
+                    clearInterval(slideInterval);
+                    runTimer();
+                    $('.screen2__animation__img').removeClass('active');
+                    $('.screen2__animation__img.take_' + value).addClass('active');
+                    if (value%2===0) {
+                        $('.screen2__animation__motor').removeClass('active');
+                        $('.screen2__animation__motor.take_' + value).addClass('active');
+                        $('.inputRange__item').removeClass('circle__after');
+                        $('.inputRange__item').each(function(index, elem) {
+                            if (index < value/2+1) {
+                                $(elem).addClass('circle__after');
+                            }
+                        })
+                    }
+                },
+                from: 0,
+                to: 14,
+                step: 1,
+                scale: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+                format: '%s',
+                width: 485,
+                showLabels: false,
+                snap: true,
+                showScale: false,
+            });
+            $('.screen2__animation__img').css(
+                'width', '80%',
+            );
+        } else {
+            $('.input').css('width', '207px');
+            $('.inputRange').css('width', '207px');
+            var slider = $('.slider-input').jRange({
+                onstatechange: function (value) {
+                    slide = value;
+                    clearInterval(slideInterval);
+                    runTimer();
+                    $('.screen2__animation__img').removeClass('active');
+                    $('.screen2__animation__img.take_' + value).addClass('active');
+                    if (value%2===0) {
+                        $('.screen2__animation__motor').removeClass('active');
+                        $('.screen2__animation__motor.take_' + value).addClass('active');
+                        $('.inputRange__item').removeClass('circle__after');
+                        $('.inputRange__item').each(function(index, elem) {
+                            if (index < value/2+1) {
+                                $(elem).addClass('circle__after');
+                            }
+                        })
+                    }
+
+                },
+                from: 0,
+                to: 14,
+                step: 1,
+                scale: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+                format: '%s',
+                width: 207,
+
+                showLabels: false,
+                snap: true,
+                showScale: false,
+            });
+            $('.swiper-button-next, .swiper-button-prev').css(
+                // 'width', '100%',
+                'top', '60%',
+            );
+            $('.screen2__animation__img').css(
+                'width', '60%',
+            );
+            $('.screen4').css(
+                'height', '73rem',
+            );
+        };
+
+        if (width < 769) {
+            $('.range__block6').css(
+                'top', '0'
+            );
+        } else {
+            $('.range__block6').css(
+                'top', '25%'
+            );
+        };
+
+        if (width < 440) {
+            $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
+                'bottom', '3%'
+            );
+            $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
+                'height', '20%'
+            );
+            $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
+                'width', '50%'
+            );
+            $('.screen3__block1').css(
+                'left', '10%'
+            );
+
+            $('.range__block1').css(
+                'top', '0'
+            );
+            $('.range__block1').css(
+                'left', '30%'
+            );
+            $('.range__block2').css(
+                'top', '0'
+            );
+            $('.range__block2').css(
+                'left', '-3%'
+            );
+            $('.range__block3').css(
+                'top', '60%'
+            );
+            $('.range__block3').css(
+                'left', '10%'
+            );
+            $('.range__block4').css(
+                'top', '0'
+            );
+            $('.range__block4').css(
+                'left', '63%'
+            );
+            $('.range__block5').css(
+                'top', '60%'
+            );
+            $('.range__block5').css(
+                'left', '45%'
+            );
+
+            $('.screen5__caption').css(
+                'margin-top', '23.86rem'
+            );
+        } else {
+            $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
+                'bottom', '5%'
+            );
+            $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
+                'height', '10%'
+            );
+            $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
+                'width', '47.5%'
+            );
+            $('.screen3__block1').css(
+                'left', '15%'
+            );
+
+            $('.range__block1').css(
+                'top', '0'
+            );
+            $('.range__block1').css(
+                'left', '30%'
+            );
+            $('.range__block2').css(
+                'top', '35%'
+            );
+            $('.range__block2').css(
+                'left', '0'
+            );
+            $('.range__block3').css(
+                'top', '80%'
+            );
+            $('.range__block3').css(
+                'left', '15%'
+            );
+            $('.range__block4').css(
+                'top', '15%'
+            );
+            $('.range__block4').css(
+                'left', '70%'
+            );
+            $('.range__block5').css(
+                'top', '55%'
+            );
+            $('.range__block5').css(
+                'left', '80%'
+            );
+            $('.screen5__caption').css(
+                'margin-top', '23.86rem'
+            );
+        }
+        if (width < 769) {
+            $('.range__block6').css(
+                'top', '0'
+            );
+        } else {
+            $('.range__block6').css(
+                'top', '25%'
+            );
+        };
+    });
+
+    // $( window ).on( "orientationchange", function( event ) {
+    //     // console.log(132);
+    //     if (width > 769) {
+    //         var slider = $('.slider-input').jRange({
+    //             onstatechange: function (value) {
+    //                 slide = value;
+    //                 clearInterval(slideInterval);
+    //                 runTimer();
+    //                 $('.screen2__animation__img').removeClass('active');
+    //                 $('.screen2__animation__img.take_' + value).addClass('active');
+    //                 if (value%2===0) {
+    //                     $('.screen2__animation__motor').removeClass('active');
+    //                     $('.screen2__animation__motor.take_' + value).addClass('active');
+    //                     $('.inputRange__item').removeClass('circle__after');
+    //                     $('.inputRange__item').each(function(index, elem) {
+    //                         if (index < value/2+1) {
+    //                             $(elem).addClass('circle__after');
+    //                         }
+    //                     })
+    //                 }
+    //             },
+    //             from: 0,
+    //             to: 14,
+    //             step: 1,
+    //             scale: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+    //             format: '%s',
+    //             width: 485,
+    //             showLabels: false,
+    //             snap: true,
+    //             showScale: false,
+    //         });
+    //         $('.screen2__animation__img').css(
+    //             'width', '80%',
+    //         );
+    //     } else if (width < 769) {
+    //         $('.screen2__animation__img').css(
+    //         'width', '60%',
+    //         );
+    //         console.log(999);
+    //         $('.input').css('width', '207px');
+    //         $('.inputRange').css('width', '207px');
+    //         // var slider = $('.slider-input').jRange({
+    //         //     onstatechange: function (value) {
+    //         //         slide = value;
+    //         //         clearInterval(slideInterval);
+    //         //         runTimer();
+    //         //         $('.screen2__animation__img').removeClass('active');
+    //         //         $('.screen2__animation__img.take_' + value).addClass('active');
+    //         //         if (value%2===0) {
+    //         //             $('.screen2__animation__motor').removeClass('active');
+    //         //             $('.screen2__animation__motor.take_' + value).addClass('active');
+    //         //             $('.inputRange__item').removeClass('circle__after');
+    //         //             $('.inputRange__item').each(function(index, elem) {
+    //         //                 if (index < value/2+1) {
+    //         //                     $(elem).addClass('circle__after');
+    //         //                 }
+    //         //             })
+    //         //         }
+    //         //
+    //         //     },
+    //         //     from: 0,
+    //         //     to: 14,
+    //         //     step: 1,
+    //         //     scale: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+    //         //     format: '%s',
+    //         //     width: 207,
+    //         //
+    //         //     showLabels: false,
+    //         //     snap: true,
+    //         //     showScale: false,
+    //         // });
+    //         // $('.swiper-button-next, .swiper-button-prev').css(
+    //         //     // 'width', '100%',
+    //         //     'top', '60%',
+    //         // );
+    //
+    //         // $('.screen4').css(
+    //         //     'height', '73rem',
+    //         // );
+    //     }
+    //
+    //     if (width < 420) {
+    //         $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
+    //             'bottom', '3%'
+    //         );
+    //         $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
+    //             'height', '20%'
+    //         );
+    //         $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
+    //             'width', '50%'
+    //         );
+    //         $('.screen3__block1').css(
+    //             'left', '10%'
+    //         );
+    //
+    //         $('.range__block1').css(
+    //             'top', '0'
+    //         );
+    //         $('.range__block1').css(
+    //             'left', '30%'
+    //         );
+    //         $('.range__block2').css(
+    //             'top', '0'
+    //         );
+    //         $('.range__block2').css(
+    //             'left', '-3%'
+    //         );
+    //         $('.range__block3').css(
+    //             'top', '60%'
+    //         );
+    //         $('.range__block3').css(
+    //             'left', '10%'
+    //         );
+    //         $('.range__block4').css(
+    //             'top', '0'
+    //         );
+    //         $('.range__block4').css(
+    //             'left', '63%'
+    //         );
+    //         $('.range__block5').css(
+    //             'top', '60%'
+    //         );
+    //         $('.range__block5').css(
+    //             'left', '45%'
+    //         );
+    //         $('.range__block6').css(
+    //             'top', '0'
+    //         );
+    //         $('.screen5__caption').css(
+    //             'margin-top', '23.86rem'
+    //         );
+    //     }
+    // });
+
+
 
     // callback();
 
