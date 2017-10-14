@@ -969,7 +969,7 @@ a:hover {
 
 @media (max-width: 1024px) {
   .screen4 {
-    height: 710px;
+    height: 770px;
   }
   .range__block6 {
     top: 10%;
@@ -999,7 +999,7 @@ a:hover {
 
 @media (max-width: 768px) {
   .screen4 {
-    height: 595px;
+    height: 650px;
   }
   .range {
     width: 20.28rem;
@@ -1038,7 +1038,7 @@ a:hover {
     font-size: 8px;
   }
   .screen4 {
-    height: 380px;
+    height: 480px;
   }
   .range {
     width: 20.28rem;
@@ -1071,7 +1071,7 @@ a:hover {
 
 @media (max-width: 667px) {
   .screen4 {
-    height: 380px;
+    height: 460px;
   }
   .screen3__block2__slide1 {
     height: 14%;
@@ -1113,7 +1113,7 @@ a:hover {
 
 @media (max-width: 568px) {
   .screen4 {
-    height: 350px;
+    height: 420px;
   }
   .range {
     width: 20.28rem;
@@ -1150,7 +1150,7 @@ a:hover {
     font-size: 8px;
   }
   .screen4 {
-    height: 580px;
+    height: 680px;
   }
   .logo_img {
     width: 3.86rem;
@@ -1262,7 +1262,7 @@ a:hover {
 
 @media (max-width: 375px) {
   .screen4 {
-    height: 560px;
+    height: 650px;
   }
   .screen3__block2__slide2 {
     bottom: 3%;
@@ -1382,7 +1382,7 @@ a:hover {
     left: 60%;
   }
   .screen4 {
-    height: 510px;
+    height: 620px;
   }
 }
 
