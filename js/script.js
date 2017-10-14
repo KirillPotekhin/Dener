@@ -80,6 +80,7 @@ $( document ).ready(function() {
         var rate = 2.1;
         var height = width / rate;
         $('.swiper-container').height(height);
+        // $('.section_three').height(height);
 
         var slide = 0;
         var slideInterval;
@@ -88,6 +89,7 @@ $( document ).ready(function() {
         // console.log(widthslider);
 
         if (width > 1025) {
+            console.log('B');
             var slider = $('.slider-input').jRange({
                 onstatechange: function (value) {
                     slide = value;
@@ -116,16 +118,8 @@ $( document ).ready(function() {
                 snap: true,
                 showScale: false,
             });
-            $('.input').css(
-                'margin', '0 auto'
-            );
-
-            $('.screen2__animation__img').css(
-                'width', '80%',
-            );
-
-
         } else {
+            console.log('M');
             $('.input').css('width', '207px');
             $('.inputRange').css('width', '207px');
             var slider = $('.slider-input').jRange({
@@ -158,126 +152,7 @@ $( document ).ready(function() {
                 snap: true,
                 showScale: false,
             });
-            $('.swiper-button-next, .swiper-button-prev').css(
-                // 'width', '100%',
-                'top', '60%',
-            );
-            $('.screen2__animation__img').css(
-                'width', '60%',
-            );
-            $('.screen4').css(
-                'height', '73rem',
-            );
         }
-
-    if (width < 440) {
-        $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
-            'bottom', '3%'
-        );
-        $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
-            'height', '20%'
-        );
-        $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
-            'width', '50%'
-        );
-        $('.screen3__block1').css(
-            'left', '10%'
-        );
-
-        $('.range__block1').css(
-            'top', '0'
-        );
-        $('.range__block1').css(
-            'left', '30%'
-        );
-        $('.range__block2').css(
-            'top', '0'
-        );
-        $('.range__block2').css(
-            'left', '-3%'
-        );
-        $('.range__block3').css(
-            'top', '60%'
-        );
-        $('.range__block3').css(
-            'left', '10%'
-        );
-        $('.range__block4').css(
-            'top', '0'
-        );
-        $('.range__block4').css(
-            'left', '63%'
-        );
-        $('.range__block5').css(
-            'top', '60%'
-        );
-        $('.range__block5').css(
-            'left', '45%'
-        );
-        $('.range__block6').css(
-            'top', '0'
-        );
-        $('.screen5__caption').css(
-            'margin-top', '23.86rem'
-        );
-    } else {
-        $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
-            'bottom', '5%'
-        );
-        $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
-            'height', '10%'
-        );
-        $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
-            'width', '47.5%'
-        );
-        $('.screen3__block1').css(
-            'left', '15%'
-        );
-
-        $('.range__block1').css(
-            'top', '0'
-        );
-        $('.range__block1').css(
-            'left', '30%'
-        );
-        $('.range__block2').css(
-            'top', '35%'
-        );
-        $('.range__block2').css(
-            'left', '0'
-        );
-        $('.range__block3').css(
-            'top', '80%'
-        );
-        $('.range__block3').css(
-            'left', '15%'
-        );
-        $('.range__block4').css(
-            'top', '15%'
-        );
-        $('.range__block4').css(
-            'left', '70%'
-        );
-        $('.range__block5').css(
-            'top', '55%'
-        );
-        $('.range__block5').css(
-            'left', '80%'
-        );
-        $('.range__block6').css(
-            'top', '25%'
-        );
-        $('.screen5__caption').css(
-            'margin-top', '23.86rem'
-        );
-    }
-
-    if (width > 767) {
-        $('.screen2__animation__img').css(
-            'width', '80%',
-        );
-    }
-
 
     function runTimer() {
         slideInterval = setInterval(function () {
@@ -287,7 +162,7 @@ $( document ).ready(function() {
             } else {
                 slide++;
             }
-        }, 3000);
+        }, 2000);
     }
 
     var sliderInited = false;
@@ -347,341 +222,11 @@ $( document ).ready(function() {
         var rate = 2.1;
         var height = width / rate;
         $('.swiper-container').height(height);
+        // $('.section_three').height(height);
 
-        $('.swiper-container').css('overflow: hidden');
+        // $('.swiper-container').css('overflow: hidden');
 
-        if (width > 1025) {
-            var slider = $('.slider-input').jRange({
-                onstatechange: function (value) {
-                    slide = value;
-                    clearInterval(slideInterval);
-                    runTimer();
-                    $('.screen2__animation__img').removeClass('active');
-                    $('.screen2__animation__img.take_' + value).addClass('active');
-                    if (value%2===0) {
-                        $('.screen2__animation__motor').removeClass('active');
-                        $('.screen2__animation__motor.take_' + value).addClass('active');
-                        $('.inputRange__item').removeClass('circle__after');
-                        $('.inputRange__item').each(function(index, elem) {
-                            if (index < value/2+1) {
-                                $(elem).addClass('circle__after');
-                            }
-                        })
-                    }
-                },
-                from: 0,
-                to: 14,
-                step: 1,
-                scale: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
-                format: '%s',
-                width: 485,
-                showLabels: false,
-                snap: true,
-                showScale: false,
-            });
-            $('.screen2__animation__img').css(
-                'width', '80%',
-            );
-        } else {
-            $('.input').css('width', '207px');
-            $('.inputRange').css('width', '207px');
-            var slider = $('.slider-input').jRange({
-                onstatechange: function (value) {
-                    slide = value;
-                    clearInterval(slideInterval);
-                    runTimer();
-                    $('.screen2__animation__img').removeClass('active');
-                    $('.screen2__animation__img.take_' + value).addClass('active');
-                    if (value%2===0) {
-                        $('.screen2__animation__motor').removeClass('active');
-                        $('.screen2__animation__motor.take_' + value).addClass('active');
-                        $('.inputRange__item').removeClass('circle__after');
-                        $('.inputRange__item').each(function(index, elem) {
-                            if (index < value/2+1) {
-                                $(elem).addClass('circle__after');
-                            }
-                        })
-                    }
-
-                },
-                from: 0,
-                to: 14,
-                step: 1,
-                scale: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
-                format: '%s',
-                width: 207,
-
-                showLabels: false,
-                snap: true,
-                showScale: false,
-            });
-            $('.swiper-button-next, .swiper-button-prev').css(
-                // 'width', '100%',
-                'top', '60%',
-            );
-            $('.screen2__animation__img').css(
-                'width', '60%',
-            );
-            $('.screen4').css(
-                'height', '73rem',
-            );
-        };
-
-        if (width < 769) {
-            $('.range__block6').css(
-                'top', '0'
-            );
-        } else {
-            $('.range__block6').css(
-                'top', '25%'
-            );
-        };
-
-        if (width < 440) {
-            $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
-                'bottom', '3%'
-            );
-            $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
-                'height', '20%'
-            );
-            $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
-                'width', '50%'
-            );
-            $('.screen3__block1').css(
-                'left', '10%'
-            );
-
-            $('.range__block1').css(
-                'top', '0'
-            );
-            $('.range__block1').css(
-                'left', '30%'
-            );
-            $('.range__block2').css(
-                'top', '0'
-            );
-            $('.range__block2').css(
-                'left', '-3%'
-            );
-            $('.range__block3').css(
-                'top', '60%'
-            );
-            $('.range__block3').css(
-                'left', '10%'
-            );
-            $('.range__block4').css(
-                'top', '0'
-            );
-            $('.range__block4').css(
-                'left', '63%'
-            );
-            $('.range__block5').css(
-                'top', '60%'
-            );
-            $('.range__block5').css(
-                'left', '45%'
-            );
-
-            $('.screen5__caption').css(
-                'margin-top', '23.86rem'
-            );
-        } else {
-            $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
-                'bottom', '5%'
-            );
-            $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
-                'height', '10%'
-            );
-            $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
-                'width', '47.5%'
-            );
-            $('.screen3__block1').css(
-                'left', '15%'
-            );
-
-            $('.range__block1').css(
-                'top', '0'
-            );
-            $('.range__block1').css(
-                'left', '30%'
-            );
-            $('.range__block2').css(
-                'top', '35%'
-            );
-            $('.range__block2').css(
-                'left', '0'
-            );
-            $('.range__block3').css(
-                'top', '80%'
-            );
-            $('.range__block3').css(
-                'left', '15%'
-            );
-            $('.range__block4').css(
-                'top', '15%'
-            );
-            $('.range__block4').css(
-                'left', '70%'
-            );
-            $('.range__block5').css(
-                'top', '55%'
-            );
-            $('.range__block5').css(
-                'left', '80%'
-            );
-            $('.screen5__caption').css(
-                'margin-top', '23.86rem'
-            );
-        }
-        if (width < 769) {
-            $('.range__block6').css(
-                'top', '0'
-            );
-        } else {
-            $('.range__block6').css(
-                'top', '25%'
-            );
-        };
-    });
-
-    // $( window ).on( "orientationchange", function( event ) {
-    //     // console.log(132);
-    //     if (width > 769) {
-    //         var slider = $('.slider-input').jRange({
-    //             onstatechange: function (value) {
-    //                 slide = value;
-    //                 clearInterval(slideInterval);
-    //                 runTimer();
-    //                 $('.screen2__animation__img').removeClass('active');
-    //                 $('.screen2__animation__img.take_' + value).addClass('active');
-    //                 if (value%2===0) {
-    //                     $('.screen2__animation__motor').removeClass('active');
-    //                     $('.screen2__animation__motor.take_' + value).addClass('active');
-    //                     $('.inputRange__item').removeClass('circle__after');
-    //                     $('.inputRange__item').each(function(index, elem) {
-    //                         if (index < value/2+1) {
-    //                             $(elem).addClass('circle__after');
-    //                         }
-    //                     })
-    //                 }
-    //             },
-    //             from: 0,
-    //             to: 14,
-    //             step: 1,
-    //             scale: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
-    //             format: '%s',
-    //             width: 485,
-    //             showLabels: false,
-    //             snap: true,
-    //             showScale: false,
-    //         });
-    //         $('.screen2__animation__img').css(
-    //             'width', '80%',
-    //         );
-    //     } else if (width < 769) {
-    //         $('.screen2__animation__img').css(
-    //         'width', '60%',
-    //         );
-    //         console.log(999);
-    //         $('.input').css('width', '207px');
-    //         $('.inputRange').css('width', '207px');
-    //         // var slider = $('.slider-input').jRange({
-    //         //     onstatechange: function (value) {
-    //         //         slide = value;
-    //         //         clearInterval(slideInterval);
-    //         //         runTimer();
-    //         //         $('.screen2__animation__img').removeClass('active');
-    //         //         $('.screen2__animation__img.take_' + value).addClass('active');
-    //         //         if (value%2===0) {
-    //         //             $('.screen2__animation__motor').removeClass('active');
-    //         //             $('.screen2__animation__motor.take_' + value).addClass('active');
-    //         //             $('.inputRange__item').removeClass('circle__after');
-    //         //             $('.inputRange__item').each(function(index, elem) {
-    //         //                 if (index < value/2+1) {
-    //         //                     $(elem).addClass('circle__after');
-    //         //                 }
-    //         //             })
-    //         //         }
-    //         //
-    //         //     },
-    //         //     from: 0,
-    //         //     to: 14,
-    //         //     step: 1,
-    //         //     scale: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
-    //         //     format: '%s',
-    //         //     width: 207,
-    //         //
-    //         //     showLabels: false,
-    //         //     snap: true,
-    //         //     showScale: false,
-    //         // });
-    //         // $('.swiper-button-next, .swiper-button-prev').css(
-    //         //     // 'width', '100%',
-    //         //     'top', '60%',
-    //         // );
-    //
-    //         // $('.screen4').css(
-    //         //     'height', '73rem',
-    //         // );
-    //     }
-    //
-    //     if (width < 420) {
-    //         $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
-    //             'bottom', '3%'
-    //         );
-    //         $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
-    //             'height', '20%'
-    //         );
-    //         $('.screen3__block2__slide1, .screen3__block2__slide2, .screen3__block2__slide3').css(
-    //             'width', '50%'
-    //         );
-    //         $('.screen3__block1').css(
-    //             'left', '10%'
-    //         );
-    //
-    //         $('.range__block1').css(
-    //             'top', '0'
-    //         );
-    //         $('.range__block1').css(
-    //             'left', '30%'
-    //         );
-    //         $('.range__block2').css(
-    //             'top', '0'
-    //         );
-    //         $('.range__block2').css(
-    //             'left', '-3%'
-    //         );
-    //         $('.range__block3').css(
-    //             'top', '60%'
-    //         );
-    //         $('.range__block3').css(
-    //             'left', '10%'
-    //         );
-    //         $('.range__block4').css(
-    //             'top', '0'
-    //         );
-    //         $('.range__block4').css(
-    //             'left', '63%'
-    //         );
-    //         $('.range__block5').css(
-    //             'top', '60%'
-    //         );
-    //         $('.range__block5').css(
-    //             'left', '45%'
-    //         );
-    //         $('.range__block6').css(
-    //             'top', '0'
-    //         );
-    //         $('.screen5__caption').css(
-    //             'margin-top', '23.86rem'
-    //         );
-    //     }
-    // });
-
-
-
-    // callback();
-
+    })
 });
 
 
