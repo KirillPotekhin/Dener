@@ -13,19 +13,19 @@ $(window).on('scroll', function() {
                 zoom: 16
             });
             if (mapvalue === 0) {
-                map.locate({setView: true, watch: true})
+                map.locate({setView: true})
                     .on('locationfound', function(e) {
                         DG.marker([e.latitude, e.longitude]).addTo(map);
                         mapvalue = 1;
                         console.log('готово')
                     })
-                    // .on('locationerror', function(e) {
-                    //     DG.popup()
-                    //         .setLatLng(map.getCenter())
-                    //         .setContent('Доступ к определению местоположения отключён')
-                    //         .openOn(map);
-                    //         mapvalue = 1;
-                    // });
+                    .on('locationerror', function(e) {
+                        DG.popup()
+                            .setLatLng(map.getCenter())
+                            .setContent('Доступ к определению местоположения отключён')
+                            .openOn(map);
+                            mapvalue = 1;
+                    });
             }
 
 
