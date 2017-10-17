@@ -1,4 +1,5 @@
 var mapInited = false;
+var mapvalue = 0;
 
 
 $(window).on('scroll', function() {
@@ -11,17 +12,23 @@ $(window).on('scroll', function() {
                 center: [55.0425, 82.9343],
                 zoom: 16
             });
+            if (mapvalue === 0) {
+                map.locate({setView: true, watch: true})
+                    .on('locationfound', function(e) {
+                        DG.marker([e.latitude, e.longitude]).addTo(map);
+                        mapvalue = mapvalue + 1;
+                        console.log('готово')
+                    })
+                    .on('locationerror', function(e) {
+                        DG.popup()
+                            .setLatLng(map.getCenter())
+                            .setContent('Доступ к определению местоположения отключён')
+                            .openOn(map);
+                            mapvalue = mapvalue + 1;
+                    });
+            }
 
-            map.locate({setView: true, watch: true})
-                .on('locationfound', function(e) {
-                    DG.marker([e.latitude, e.longitude]).addTo(map);
-                })
-                .on('locationerror', function(e) {
-                    DG.popup()
-                        .setLatLng(map.getCenter())
-                        .setContent('Доступ к определению местоположения отключён')
-                        .openOn(map);
-                });
+
 
             DG.marker([55.075230, 82.961786]).addTo(map).bindPopup('Дядя Дёнер<br>сеть кафе быстрого питания<br>Адрес:25 лет Октября, 16/1<br>Телефон предзаказа: 399-1-400<br>Режим работы: круглосуточно');
             DG.marker([54.865871, 83.080225]).addTo(map).bindPopup('Дядя Дёнер<br>сеть кафе быстрого питания<br>Адрес:Героев Труда, 27<br>Телефон предзаказа: 399-1-400<br>Режим работы: круглосуточно');
@@ -121,6 +128,28 @@ $(window).on('scroll', function() {
 
 
 })
+
+// $( document ).ready(function() {
+//     $('#rangeSlider').rangeslider({
+//         polyfill: false,
+//         onSlideEnd: function() {
+//             console.log(1)
+//         },
+//         onSlide: function(position, value) {
+//             $('.screen2__animation__motor').removeClass('active');
+//             $('.screen2__animation__motor.take_' + value).addClass('active');
+//             $('.inputRange__item').removeClass('circle__after');
+//             $('.inputRange__item').each(function(index, elem) {
+//                 if (index < value) {
+//                     $(elem).addClass('circle__after');
+//                 }
+//             })
+//         },
+//     });
+//
+//
+// });
+
 
 $( document ).ready(function() {
         var width = $(window).width();
