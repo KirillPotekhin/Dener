@@ -998,6 +998,15 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .screen3__block2__slide1 {
+    height: 14%;
+  }
+  .screen3__block2__slide2 {
+    height: 14%;
+  }
+  .screen3__block2__slide3 {
+    height: 11%;
+  }
   .screen4 {
     height: 650px;
   }

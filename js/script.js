@@ -3,7 +3,7 @@ var mapvalue = 0;
 
 
 $(window).on('scroll', function() {
-    if (($(window).scrollTop() > $(document).height() - $(window).height() * 1.5) && !mapInited){
+    if (($(window).scrollTop() > $(document).height() - $('.section_five').height() * 1.2) && !mapInited){
         mapInited = true;
         DG.then(function() {
             var map;
@@ -16,7 +16,7 @@ $(window).on('scroll', function() {
                 map.locate({setView: true, watch: true})
                     .on('locationfound', function(e) {
                         DG.marker([e.latitude, e.longitude]).addTo(map);
-                        mapvalue = mapvalue + 1;
+                        mapvalue = 1;
                         console.log('готово')
                     })
                     .on('locationerror', function(e) {
@@ -24,7 +24,7 @@ $(window).on('scroll', function() {
                             .setLatLng(map.getCenter())
                             .setContent('Доступ к определению местоположения отключён')
                             .openOn(map);
-                            mapvalue = mapvalue + 1;
+                            mapvalue = 1;
                     });
             }
 
@@ -124,7 +124,39 @@ $(window).on('scroll', function() {
     }
 
     var parallaxOffset = $(window).scrollTop() * -0.5;
-    $('.parallax__layer--back').css({'background-position': `0 ${parallaxOffset}px`})
+    $('.parallax__layer--back').css({'background-position': `0 ${parallaxOffset}px`});
+    var firstvalue = 0;
+    var secondvalue = 0;
+    var threevalue = 0;
+    var fourvalue = 0;
+    var fivevalue = 0;
+
+    if ((firstvalue===0) && ($(window).scrollTop() > $('.section_first').height()) && ($(window).scrollTop() < $('.section_first').height() + $('.section_second').height())){
+        yaCounter46236420.reachGoal('mainscroll'),
+        ga('send', 'event', 'form', 'submit', 'gmainscroll'),
+        firstvalue = 1
+    }
+    if ((secondvalue===0) && ($(window).scrollTop() > $('.section_first').height() + $('.section_second').height()) && ($(window).scrollTop() < $('.section_first').height() + $('.section_second').height() + $('.section_three').height())){
+        yaCounter46236420.reachGoal('2croll'),
+        ga('send', 'event', 'form', 'submit', 'g2scroll'),
+        secondvalue = 1
+    }
+    if ((threevalue===0) && ($(window).scrollTop() > $('.section_first').height() + $('.section_second').height() + $('.section_three').height()) && ($(window).scrollTop() < $('.section_first').height() + $('.section_second').height() + $('.section_three').height() + $('.section_four').height())){
+        yaCounter46236420.reachGoal('3croll'),
+        ga('send', 'event', 'form', 'submit', 'g3scroll'),
+        threevalue = 1
+    }
+    if ((fourvalue===0) && ($(window).scrollTop() > $('.section_first').height() + $('.section_second').height() + $('.section_three').height() + $('.section_four').height()) && ($(window).scrollTop() < $(document).height() - $('.section_five').height())){
+        yaCounter46236420.reachGoal('4croll'),
+        ga('send', 'event', 'form', 'submit', 'g4scroll'),
+        fourvalue = 1
+    }
+    if ((fivevalue===0) && ($(window).scrollTop() > $(document).height() - $('.section_five').height())){
+        yaCounter46236420.reachGoal('5croll'),
+        ga('send', 'event', 'form', 'submit', 'g5scroll'),
+        fivevalue = 1
+    }
+    return true;
 
 
 })
