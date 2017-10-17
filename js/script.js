@@ -26,6 +26,7 @@ $(window).on('scroll', function() {
                             .openOn(map);
                             mapvalue = 1;
                     });
+
             }
 
 
@@ -291,7 +292,7 @@ $( document ).ready(function() {
 
     var sliderInited = false;
     $(window).on('scroll', function () {
-        if ($(window).scrollTop() > $(window).height() && !sliderInited) {
+        if ($(window).scrollTop() > $('.section_first').height() && !sliderInited) {
             runTimer();
             sliderInited = true;
         }
