@@ -13,6 +13,7 @@ $(window).on('scroll', function() {
                 zoom: 16
             });
             if (mapvalue === 0) {
+                map.locate({setView: true, watch: false})
                     .on('locationfound', function(e) {
                         DG.marker([e.latitude, e.longitude]).addTo(map);
                         mapvalue = 1;
