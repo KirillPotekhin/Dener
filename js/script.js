@@ -19,13 +19,6 @@ $(window).on('scroll', function() {
                         mapvalue = 1;
                         console.log('готово')
                     })
-                    .on('locationerror', function(e) {
-                        DG.popup()
-                            .setLatLng(map.getCenter())
-                            .setContent('Доступ к определению местоположения отключён')
-                            .openOn(map);
-                            mapvalue = 1;
-                    });
 
             }
 
